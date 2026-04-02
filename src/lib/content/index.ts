@@ -1,6 +1,22 @@
 import { render } from 'svelte/server';
+import { base } from '$app/paths';
 import type { CaseStudy, UseCase, CaseStudyUseCaseJoin, UserStory, HowItWorksStep } from '$lib/types';
 import type { Component } from 'svelte';
+
+/** Prefix local asset paths (starting with /) with the base path */
+function assetPath(path: string | undefined): string | undefined {
+	if (!path) return path;
+	if (path.startsWith('/') && !path.startsWith('//')) return `${base}${path}`;
+	return path;
+}
+
+/** Prefix screenshot paths in a CaseStudyUseCaseJoin */
+function prefixJoinAssets(joins: CaseStudyUseCaseJoin[]): CaseStudyUseCaseJoin[] {
+	return joins.map((j) => ({
+		...j,
+		screenshots: j.screenshots?.map((s) => assetPath(s) ?? s),
+	}));
+}
 
 // Import all case study markdown files
 const caseStudyFiles = import.meta.glob('/src/content/case-studies/*.md', { eager: true });
@@ -25,7 +41,7 @@ function parseCaseStudy(file: MdFile): CaseStudy {
 	return {
 		name: m.name as string,
 		slug: m.slug as string,
-		logo: m.logo as string,
+		logo: assetPath(m.logo as string) ?? '',
 		url: (m.url as string) ?? '',
 		description: m.description as string,
 		userType: m.userType as string,
@@ -35,9 +51,9 @@ function parseCaseStudy(file: MdFile): CaseStudy {
 		featured: (m.featured as boolean) ?? false,
 		metrics: (m.metrics as CaseStudy['metrics']) ?? [],
 		tags: (m.tags as string[]) ?? [],
-		useCases: (m.useCases as CaseStudyUseCaseJoin[]) ?? [],
+		useCases: prefixJoinAssets((m.useCases as CaseStudyUseCaseJoin[]) ?? []),
 		content: renderContent(file),
-		coverImage: (m.coverImage as string) ?? undefined,
+		coverImage: assetPath((m.coverImage as string) ?? undefined),
 		transformation: (m.transformation as CaseStudy['transformation']) ?? undefined,
 		storyBeats: (m.storyBeats as CaseStudy['storyBeats']) ?? undefined
 	};
@@ -45,13 +61,14 @@ function parseCaseStudy(file: MdFile): CaseStudy {
 
 function parseUseCase(file: MdFile): UseCase {
 	const m = file.metadata;
+	const rawScreenshots = (m.screenshots as UseCase['screenshots']) ?? undefined;
 	return {
 		name: m.name as string,
 		slug: m.slug as string,
 		icon: m.icon as string,
 		tagline: m.tagline as string,
-		coverImage: (m.coverImage as string) ?? undefined,
-		screenshots: (m.screenshots as UseCase['screenshots']) ?? undefined,
+		coverImage: assetPath((m.coverImage as string) ?? undefined),
+		screenshots: rawScreenshots?.map((s) => ({ ...s, src: assetPath(s.src) ?? s.src })),
 		featuredPartners: (m.featuredPartners as UseCase['featuredPartners']) ?? undefined,
 		relevantUserTypes: (m.relevantUserTypes as string[]) ?? [],
 		demoComponent: (m.demoComponent as string) ?? null,
