@@ -1,13 +1,14 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { Menu, X } from 'lucide-svelte';
 
 	let mobileOpen = $state(false);
 
 	const navItems = [
-		{ href: '/', label: 'Home', exact: true },
-		{ href: '/case-studies', label: 'Case Studies' },
-		{ href: '/use-cases', label: 'Use Cases' }
+		{ href: `${base}/`, label: 'Home', exact: true },
+		{ href: `${base}/case-studies`, label: 'Case Studies' },
+		{ href: `${base}/use-cases`, label: 'Use Cases' }
 	];
 
 	function closeMobile() {
@@ -17,7 +18,7 @@
 
 <header class="fixed top-0 left-0 right-0 z-50 border-b border-near-border bg-near-white/90 backdrop-blur-lg">
 	<nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-		<a href="/" class="flex items-center gap-2 text-lg font-bold text-near-text">
+		<a href="{base}/" class="flex items-center gap-2 text-lg font-bold text-near-text">
 			<span class="text-near-green-dark">NEAR</span> Intents
 		</a>
 

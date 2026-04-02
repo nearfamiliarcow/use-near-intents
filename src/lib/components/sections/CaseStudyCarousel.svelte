@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-svelte';
 	import type { CaseStudy } from '$lib/types';
 	import { getUserType } from '$lib/data/user-types';
@@ -64,7 +65,7 @@
 				<h2 class="text-xl font-bold text-near-text sm:text-2xl">Case Studies</h2>
 				<p class="mt-1 text-sm text-near-text-secondary">Real partners building with NEAR Intents</p>
 			</div>
-			<a href="/case-studies" class="text-sm font-medium text-near-green-dark hover:underline">View all →</a>
+			<a href="{base}/case-studies" class="text-sm font-medium text-near-green-dark hover:underline">View all →</a>
 		</div>
 
 		<div class="overflow-hidden rounded-2xl border border-near-border bg-near-surface shadow-sm">
@@ -98,7 +99,7 @@
 							{#each active.useCases.slice(0, 3) as uc}
 								<div class="flex items-baseline gap-2.5">
 									<div class="h-1.5 w-1.5 shrink-0 translate-y-[-1px] rounded-full bg-near-green-dark"></div>
-									<a href="/use-cases/{uc.useCase}" class="text-sm text-near-text hover:text-near-green-dark">
+									<a href="{base}/use-cases/{uc.useCase}" class="text-sm text-near-text hover:text-near-green-dark">
 										<span class="font-medium">{uc.useCase.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</span>
 										<span class="text-near-text-secondary"> — {uc.summary.split('—')[0].split('.')[0]}</span>
 									</a>
@@ -109,7 +110,7 @@
 
 					<div class="mt-6 sm:mt-8">
 						<a
-							href="/case-studies/{active.slug}"
+							href="{base}/case-studies/{active.slug}"
 							class="inline-flex items-center gap-2 rounded-lg bg-near-green-dark px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
 						>
 							Read full case study
@@ -124,7 +125,7 @@
 						<div class="flex max-h-full {activeScreenshots.length === 1 ? 'items-center justify-center' : 'items-end gap-3 sm:gap-4 justify-center'}">
 							{#each activeScreenshots as src, i}
 								<a
-									href="/case-studies/{active.slug}"
+									href="{base}/case-studies/{active.slug}"
 									class="overflow-hidden rounded-xl shadow-lg transition-transform hover:scale-[1.02] {activeScreenshots.length >= 3 ? 'max-w-[130px] sm:max-w-[160px]' : activeScreenshots.length === 2 ? 'max-w-[170px] sm:max-w-[200px]' : ''}"
 								>
 									<img

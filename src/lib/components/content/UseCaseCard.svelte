@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import type { UseCase } from '$lib/types';
 	import { getCaseStudiesByUseCase, getRevenueHookForUserType } from '$lib/content';
 	import { getUserType } from '$lib/data/user-types';
@@ -145,7 +146,7 @@
 </script>
 
 <a
-	href="/use-cases/{useCase.slug}{userTypeFilter ? `?userType=${userTypeFilter}` : ''}"
+	href="{base}/use-cases/{useCase.slug}{userTypeFilter ? `?userType=${userTypeFilter}` : ''}"
 	class="group flex flex-col overflow-hidden rounded-xl border border-near-border bg-near-surface shadow-sm transition-all hover:shadow-md {colors.bg}"
 >
 	<div class="flex flex-1 flex-col p-5 sm:p-6">

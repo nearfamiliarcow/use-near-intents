@@ -22,15 +22,16 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: '404.html',
+			fallback: 'index.html',
 			precompress: false,
-			strict: true
+			strict: false
 		}),
 		paths: {
 			base: process.env.GITHUB_PAGES ? '/use-near-intents' : ''
 		},
 		prerender: {
-			entries: ['*']
+			entries: ['*'],
+			handleHttpError: 'warn'
 		}
 	}
 };

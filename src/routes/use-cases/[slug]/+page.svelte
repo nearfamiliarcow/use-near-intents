@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { getUserStoriesForUserType } from '$lib/content';
 	import { ExternalLink } from 'lucide-svelte';
@@ -83,7 +84,7 @@
 
 		<!-- Back button -->
 		<a
-			href="/use-cases{userTypeFilter ? `?userType=${userTypeFilter}` : ''}"
+			href="{base}/use-cases{userTypeFilter ? `?userType=${userTypeFilter}` : ''}"
 			class="mb-4 inline-flex items-center gap-1.5 text-sm text-near-text-secondary transition-colors hover:text-near-text sm:mb-6"
 		>
 			<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -132,7 +133,7 @@
 				</h2>
 				<div class="space-y-3 sm:space-y-4">
 					{#each filteredCaseStudies as cs}
-						<Card href="/case-studies/{cs.slug}">
+						<Card href="{base}/case-studies/{cs.slug}">
 							<div class="flex items-start justify-between gap-3">
 								<div class="flex min-w-0 flex-1 items-center gap-3">
 									{#if cs.logo}
@@ -219,7 +220,7 @@
 
 		<!-- Back button -->
 		<a
-			href="/use-cases{userTypeFilter ? `?userType=${userTypeFilter}` : ''}"
+			href="{base}/use-cases{userTypeFilter ? `?userType=${userTypeFilter}` : ''}"
 			class="mb-4 inline-flex items-center gap-1.5 text-sm text-near-text-secondary transition-colors hover:text-near-text sm:mb-6"
 		>
 			<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -259,7 +260,7 @@
 				<h2 class="mb-4 text-lg font-bold text-near-text sm:mb-6 sm:text-xl">Partners Using {data.useCase.name}</h2>
 				<div class="space-y-3 sm:space-y-4">
 					{#each filteredCaseStudies as cs}
-						<Card href="/case-studies/{cs.slug}">
+						<Card href="{base}/case-studies/{cs.slug}">
 							<div class="flex items-start justify-between gap-3">
 								<div class="min-w-0 flex-1">
 									<h3 class="text-base font-semibold text-near-text sm:text-lg">{cs.name}</h3>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { getUserType } from '$lib/data/user-types';
 	import { getChain } from '$lib/data/chains';
 	import { ExternalLink, ArrowRight } from 'lucide-svelte';
@@ -68,7 +69,7 @@
 				<!-- Badges -->
 				<div class="mb-2 flex flex-wrap items-center gap-2">
 					{#if userType}
-						<Badge variant="green" href="/case-studies?userType={caseStudy.userType}">{userType.name}</Badge>
+						<Badge variant="green" href="{base}/case-studies?userType={caseStudy.userType}">{userType.name}</Badge>
 					{/if}
 					{#each caseStudy.chains as chainSlug}
 						{@const chain = getChain(chainSlug)}
@@ -140,7 +141,7 @@
 						<div class="flex-1">
 							<h3 class="text-base font-semibold text-near-text sm:text-lg">{join.resolved?.name ?? join.useCase}</h3>
 						</div>
-						<a href="/use-cases/{join.useCase}" class="text-xs font-medium text-near-green-dark hover:underline sm:text-sm">
+						<a href="{base}/use-cases/{join.useCase}" class="text-xs font-medium text-near-green-dark hover:underline sm:text-sm">
 							Learn more →
 						</a>
 					</div>
@@ -249,7 +250,7 @@
 			</p>
 			<div class="mt-5 flex flex-col items-center justify-center gap-3 sm:mt-6 sm:flex-row sm:gap-4">
 				<a
-					href="/use-cases"
+					href="{base}/use-cases"
 					class="w-full rounded-lg bg-near-green-dark px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:w-auto"
 				>
 					Explore Use Cases

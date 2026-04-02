@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import type { CaseStudy } from '$lib/types';
 	import { getUserType } from '$lib/data/user-types';
 	import Card from '$lib/components/ui/Card.svelte';
@@ -14,7 +15,7 @@
 
 </script>
 
-<Card href="/case-studies/{caseStudy.slug}">
+<Card href="{base}/case-studies/{caseStudy.slug}">
 	<div class="flex items-start gap-3">
 		{#if caseStudy.logo}
 			<img

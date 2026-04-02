@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { userTypes } from '$lib/data/user-types';
 	import Card from '$lib/components/ui/Card.svelte';
 
@@ -12,7 +13,7 @@
 	<p class="mb-6 text-center text-sm text-near-light-gray sm:mb-8 sm:text-base">See use cases tailored to your product</p>
 	<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
 		{#each featured as ut}
-			<Card href="/use-cases?userType={ut.slug}">
+			<Card href="{base}/use-cases?userType={ut.slug}">
 				<h3 class="text-base font-semibold text-near-text sm:text-lg">{ut.name}</h3>
 				<p class="mt-1 text-sm text-near-text-secondary">{ut.question}</p>
 			</Card>
