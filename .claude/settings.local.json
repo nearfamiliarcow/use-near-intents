@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(python3 -c ':*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/tbond/NEAR/dev/use-near-intents/static/screenshots/trustwallet-swap-btc-usdc.jpg)",
+      "Bash(sips:*)",
+      "Bash(grep -r \"near-dark\\\\|near-border\\\\|--color-near\" /Users/tbond/NEAR/dev/use-near-intents/tailwind.config.*)",
+      "Bash(npx svelte-check:*)",
+      "Bash(grep -v \"^$\")",
+      "Bash(node:*)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)"
+    ]
+  }
+}

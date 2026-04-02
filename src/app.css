@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-near-green: #00c853;
+	--color-near-green-light: #e8f5e9;
+	--color-near-green-dark: #00963f;
+	--color-near-black: #111827;
+	--color-near-dark: #1f2937;
+	--color-near-gray: #e5e7eb;
+	--color-near-gray-medium: #9ca3af;
+	--color-near-light-gray: #6b7280;
+	--color-near-white: #ffffff;
+	--color-near-bg: #fafafa;
+	--color-near-surface: #ffffff;
+	--color-near-text: #111827;
+	--color-near-text-secondary: #4b5563;
+	--color-near-border: #e5e7eb;
+
+	--color-status-live: #059669;
+	--color-status-building: #d97706;
+	--color-status-opportunity: #2563eb;
+
+	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+	color-scheme: light;
+}
+
+body {
+	@apply bg-near-bg text-near-text font-sans antialiased;
+}
+
+/* Prose styling for markdown content */
+.prose h2 {
+	@apply text-xl font-bold text-near-text mt-8 mb-4;
+}
+
+.prose h3 {
+	@apply text-lg font-semibold text-near-text mt-6 mb-3;
+}
+
+.prose p {
+	@apply text-near-text-secondary leading-relaxed mb-4;
+}
+
+.prose ul, .prose ol {
+	@apply text-near-text-secondary mb-4 pl-6;
+}
+
+.prose li {
+	@apply mb-2;
+}
+
+.prose strong {
+	@apply text-near-text font-semibold;
+}
+
+.prose a {
+	@apply text-near-green-dark underline;
+}

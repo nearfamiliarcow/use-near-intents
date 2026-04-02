@@ -1,0 +1,3 @@
+- [project_use_case_index_design.md](project_use_case_index_design.md) — Color scheme, RoleSelector, UseCaseCard patterns from the index page redesign
+- [project_visual_use_case_pattern.md](project_visual_use_case_pattern.md) — Branching visual/default layout pattern in [slug]/+page.svelte; component set for cross-chain-swaps
+- [project_cross_pay_onboarding_polish.md](project_cross_pay_onboarding_polish.md) — Polish applied to cross-pay and asset-onboarding pages; integrator-perspective framing rule
