@@ -14,7 +14,12 @@
       "Bash(GITHUB_PAGES=true npx vite build)",
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(gh run:*)",
+      "Bash(grep \"use-near-intents\" build/_app/immutable/entry/start.*.js)",
+      "Bash(grep \"base\" build/_app/immutable/entry/start.*.js)",
+      "Bash(cat build/_app/immutable/entry/start.*.js)",
+      "Bash(grep \"trailingSlash\" build/_app/immutable/chunks/*.js)"
     ]
   }
 }
