@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { browser } from '$app/environment';
 	import { getUserType } from '$lib/data/user-types';
 	import UseCaseCard from '$lib/components/content/UseCaseCard.svelte';
 	import RoleSelector from '$lib/components/ui/RoleSelector.svelte';
@@ -25,7 +26,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	let selectedUserType = $derived($page.url.searchParams.get('userType') ?? '');
+	let selectedUserType = $derived(browser ? ($page.url.searchParams.get('userType') ?? '') : '');
 
 	const filtered = $derived(
 		selectedUserType

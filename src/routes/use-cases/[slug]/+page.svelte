@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+	import { browser } from '$app/environment';
 	import { getUserStoriesForUserType } from '$lib/content';
 	import { ExternalLink } from 'lucide-svelte';
 	import Card from '$lib/components/ui/Card.svelte';
@@ -20,7 +21,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	let userTypeFilter = $derived($page.url.searchParams.get('userType') ?? '');
+	let userTypeFilter = $derived(browser ? ($page.url.searchParams.get('userType') ?? '') : '');
 
 	const userStories = $derived(getUserStoriesForUserType(data.useCase, userTypeFilter));
 	const filteredCaseStudies = $derived(

@@ -1,8 +1,8 @@
 import { getCaseStudy, getUseCase, getRelatedCaseStudies } from '$lib/content';
 import { error } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
+import type { PageLoad } from './$types';
 
-export const load: PageServerLoad = ({ params }) => {
+export const load: PageLoad = ({ params }) => {
 	const caseStudy = getCaseStudy(params.slug);
 	if (!caseStudy) throw error(404, 'Case study not found');
 
