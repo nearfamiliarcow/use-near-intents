@@ -10,7 +10,7 @@ export const userTypes: UserType[] = [
 	},
 	{
 		slug: 'multi-chain-wallet',
-		name: 'Multi-Chain Wallet',
+		name: 'Multi-Chain Wallet or dApp',
 		description: 'Multi-chain wallets that add cross-chain swaps and payments',
 		icon: 'wallet-cards',
 		question: 'How do I add cross-chain swaps and payments?'

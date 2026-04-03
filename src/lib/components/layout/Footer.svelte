@@ -6,8 +6,7 @@
 				<ul class="mt-4 space-y-2">
 					<li><a href="https://docs.near-intents.org" target="_blank" rel="noopener noreferrer" class="text-sm text-near-light-gray hover:text-near-green-dark">Documentation</a></li>
 					<li><a href="https://explorer.near-intents.org" target="_blank" rel="noopener noreferrer" class="text-sm text-near-light-gray hover:text-near-green-dark">Explorer</a></li>
-					<li><a href="https://defuse.org" target="_blank" rel="noopener noreferrer" class="text-sm text-near-light-gray hover:text-near-green-dark">Defuse</a></li>
-					<li><a href="https://near.org" target="_blank" rel="noopener noreferrer" class="text-sm text-near-light-gray hover:text-near-green-dark">NEAR Protocol</a></li>
+<li><a href="https://near.org" target="_blank" rel="noopener noreferrer" class="text-sm text-near-light-gray hover:text-near-green-dark">NEAR Protocol</a></li>
 					<li><a href="https://dune.com/near/near-intents" target="_blank" rel="noopener noreferrer" class="text-sm text-near-light-gray hover:text-near-green-dark">Dune Dashboard</a></li>
 				</ul>
 			</div>
