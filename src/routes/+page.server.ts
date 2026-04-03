@@ -1,7 +1,8 @@
 import { getLiveTokens, getLiveChains, getLiveStats, getAssetChainMap, getChainAssetList } from '$lib/data/tokens';
-import type { PageLoad } from './$types';
+import { getAllCaseStudies } from '$lib/content';
+import type { PageServerLoad } from './$types';
 
-export const load: PageLoad = async () => {
+export const load: PageServerLoad = async () => {
 	const [tokens, liveChains, stats, assetChainMap, chainAssetList] = await Promise.all([
 		getLiveTokens(),
 		getLiveChains(),
@@ -10,11 +11,14 @@ export const load: PageLoad = async () => {
 		getChainAssetList()
 	]);
 
+	const featuredCaseStudies = getAllCaseStudies().filter((cs) => cs.featured);
+
 	return {
 		tokens,
 		liveChains,
 		stats,
 		assetChainMap,
-		chainAssetList
+		chainAssetList,
+		featuredCaseStudies
 	};
 };

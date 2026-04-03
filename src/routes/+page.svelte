@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { getAllCaseStudies } from '$lib/content';
 	import StatsBar from '$lib/components/sections/StatsBar.svelte';
 	import CaseStudyCarousel from '$lib/components/sections/CaseStudyCarousel.svelte';
 	import ChainGrid from '$lib/components/sections/ChainGrid.svelte';
@@ -8,8 +7,6 @@
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
-
-	const featuredCaseStudies = getAllCaseStudies().filter((cs) => cs.featured);
 </script>
 
 <svelte:head>
@@ -27,8 +24,8 @@
 
 <StatsBar />
 
-{#if featuredCaseStudies.length > 0}
-	<CaseStudyCarousel caseStudies={featuredCaseStudies} />
+{#if data.featuredCaseStudies.length > 0}
+	<CaseStudyCarousel caseStudies={data.featuredCaseStudies} />
 {/if}
 
 <UserTypeSelector />

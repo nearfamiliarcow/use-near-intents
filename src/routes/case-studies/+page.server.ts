@@ -1,7 +1,7 @@
 import { getAllCaseStudies } from '$lib/content';
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 
-export const load: PageLoad = () => {
+export const load: PageServerLoad = () => {
 	return {
 		caseStudies: getAllCaseStudies()
 	};

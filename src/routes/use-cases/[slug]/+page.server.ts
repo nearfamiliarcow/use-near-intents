@@ -1,8 +1,8 @@
 import { getUseCase, getCaseStudiesByUseCase } from '$lib/content';
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageServerLoad = ({ params }) => {
 	const useCase = getUseCase(params.slug);
 	if (!useCase) throw error(404, 'Use case not found');
 
