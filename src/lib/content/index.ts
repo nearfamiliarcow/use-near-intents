@@ -54,6 +54,7 @@ function parseCaseStudy(file: MdFile): CaseStudy {
 		useCases: prefixJoinAssets((m.useCases as CaseStudyUseCaseJoin[]) ?? []),
 		content: renderContent(file),
 		coverImage: assetPath((m.coverImage as string) ?? undefined),
+		sortOrder: (m.sortOrder as number) ?? 99,
 		transformation: (m.transformation as CaseStudy['transformation']) ?? undefined,
 		storyBeats: (m.storyBeats as CaseStudy['storyBeats']) ?? undefined
 	};
@@ -87,7 +88,9 @@ function parseUseCase(file: MdFile): UseCase {
 // === Case Studies ===
 
 export function getAllCaseStudies(): CaseStudy[] {
-	return Object.values(caseStudyFiles).map((file) => parseCaseStudy(file as MdFile));
+	return Object.values(caseStudyFiles)
+		.map((file) => parseCaseStudy(file as MdFile))
+		.sort((a, b) => a.sortOrder - b.sortOrder);
 }
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {

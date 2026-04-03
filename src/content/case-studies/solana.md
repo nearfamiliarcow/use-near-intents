@@ -9,6 +9,7 @@ chains: []
 status: live
 integrationMethod: api
 featured: true
+sortOrder: 2
 metrics: []
 screenshots:
   - src: /screenshots/zcash-live-on-raydium.jpg

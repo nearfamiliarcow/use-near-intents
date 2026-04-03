@@ -10,6 +10,7 @@ chains:
 status: live
 integrationMethod: api
 featured: true
+sortOrder: 1
 coverImage: /screenshots/zodl-swap-zec-usdc.png
 metrics:
   - label: "Fees Generated"
@@ -113,10 +114,10 @@ useCases:
             logo: "https://coin-images.coingecko.com/coins/images/486/small/circle-zcash-color.png"
     screenshots:
       - /screenshots/zodl-onboard-input.jpg
-      - /screenshots/zodl-onboard-confirm.jpg
+      - /screenshots/zodl-bitcoin-onboarding.jpg
     captions:
       - "Depositing 1 BTC from Bitcoin into ZODL — arrives as ZEC with no extra steps"
-      - "Reviewing the quote — 1 BTC converts to 264.22 ZEC at $67,642"
+      - "Send Bitcoin and receive ZEC in your ZODL wallet"
 ---
 
 ## Why ZODL?

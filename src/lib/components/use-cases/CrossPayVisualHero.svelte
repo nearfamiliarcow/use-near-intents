@@ -269,31 +269,8 @@
 					Your users pay with anything.<br />Recipient gets their preferred stablecoin on any chain.
 				</h2>
 				<p class="mt-3 text-sm leading-relaxed text-near-text-secondary sm:text-base">
-					Add cross-chain payments to your app in a day. Senders pay with any token they hold — BTC, ETH, SOL, and 100+ others. Recipients always receive the exact stablecoin amount requested (USDC, USDT) on their chosen chain. Overpayment returns to the sender automatically. You configure the fee you charge.
+					Add cross-chain payments to your app in a day. Senders pay with any token they hold — BTC, ETH, SOL, and 100+ others. Recipients always receive the exact stablecoin amount requested (USDC, USDT) on their chosen chain. Overpayment returns to the sender automatically. You configure the fee you charge. Compatible with x402 for payments.
 				</p>
-			</div>
-
-			<!-- Quick stats row -->
-			<div class="flex flex-wrap justify-center gap-4 sm:justify-start">
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">31</span>
-					<span class="text-[11px] text-near-text-secondary">source chains</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">100+</span>
-					<span class="text-[11px] text-near-text-secondary">payment assets</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">exact</span>
-					<span class="text-[11px] text-near-text-secondary">stablecoin delivery</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">~1 day</span>
-					<span class="text-[11px] text-near-text-secondary">to integrate</span>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -13,41 +13,14 @@ chains:
 status: live
 integrationMethod: api
 featured: true
+sortOrder: 3
 coverImage: /screenshots/near-com-trade-btc-usdc.png
-metrics:
-  - label: "Chains Supported"
-    value: "31"
-    period: "available at near.com/swap"
-  - label: "Assets Available"
-    value: "100+"
-    period: "including native BTC & ETH"
-  - label: "Settlement"
-    value: "~30s"
-    period: "cross-chain, no bridging steps"
-  - label: "Integration"
-    value: "Native"
-    period: "built into the official NEAR app"
+metrics: []
 tags: []
-transformation:
-  before:
-    headline: "NEAR's homepage, no swap capability"
-    body: "Users visiting near.com who wanted to trade or move assets had to leave the site entirely — navigating to a DEX, a bridge, or a CEX to do anything with their crypto."
-  after:
-    headline: "Cross-chain swaps built into the NEAR homepage"
-    body: "near.com now ships a full cross-chain swap interface. Anyone can trade BTC, ETH, SOL, USDC, NEAR, and 100+ assets from a single tab — no bridge, no DEX hop, no extra account."
-storyBeats:
-  - icon: blocks
-    label: "The gap"
-    body: "The official NEAR website had no built-in way to swap or move assets. Users who wanted to trade had to leave — finding a DEX, bridge, or CEX on their own, often never coming back."
-  - icon: zap
-    label: "The fix"
-    body: "NEAR Intents powers a native swap interface at near.com. Quote, review, confirm — in one place, on the NEAR ecosystem's own front door. A 1.2 BTC to USDC trade executes in ~30 seconds."
-  - icon: trending-up
-    label: "The signal"
-    body: "near.com using NEAR Intents for its own swap feature is the clearest signal of what NEAR Intents enables: production-grade cross-chain swaps that any app can ship, built by the team that knows the stack best."
+storyBeats: []
 useCases:
   - useCase: cross-chain-swaps
-    summary: "near.com users can swap BTC, ETH, SOL, and 100+ assets directly from the NEAR homepage — powered by NEAR Intents. The screenshot shows a live quote for 1.2 BTC to 81,601 USDC. One tab, one confirmation, ~30 seconds."
+    summary: "Users swap between Bitcoin, ETH, SOL, and every other NEAR Intents-supported asset — right in the app. Every asset has liquidity sourced from the NEAR Intents solver network, and chains are completely abstracted away. Pick your source and destination, confirm, and the swap settles in ~30 seconds."
     flow:
       - "BTC / ETH / SOL (any chain)"
       - "NEAR Intents"
@@ -76,7 +49,11 @@ useCases:
     captions:
       - "Trading 1.2 BTC for 81,601 USDC on near.com"
   - useCase: cross-chain-custody
-    summary: "near.com lets users custody and manage assets across 31 chains from a single NEAR account. One wallet, one signature — hold BTC, ETH, SOL, and more without switching apps or managing multiple keys."
+    summary: "near.com is a unified interface for multi-chain assets. Log in with whatever wallet you're most comfortable with — passkey, any EVM wallet, or anything else supported — and that's the only key you ever need. Deposit from any supported chain to fund your account. Withdraw to any supported chain when you need to move assets out. While using near.com, you never think about what chain you're on — Bitcoin, Ethereum, Solana, Zcash, it's all accessible from one place. No juggling multiple wallets, no managing separate seed phrases, no switching between chain-specific apps. The complexity of 31 chains collapses into a single, seamless experience."
+    screenshots:
+      - /screenshots/cross-chain-custody-diagram.png
+    captions:
+      - "One key controls assets on Bitcoin, Solana, Zcash, and more — powered by NEAR Chain Signatures"
     flow:
       - "NEAR account"
       - "NEAR Intents"
@@ -96,7 +73,11 @@ useCases:
             logo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
         moreCount: 28
   - useCase: asset-onboarding
-    summary: "near.com serves as an on-ramp for the NEAR ecosystem. Users arriving from Bitcoin, Ethereum, or Solana can swap their native assets into NEAR or any NEAR-ecosystem token — without leaving the site or creating a new account."
+    summary: "Depositing onto near.com works like a centralized exchange — but fully non-custodial. Get a deposit address for any supported asset, send your coins from anywhere (wallet, exchange, cold storage), and your near.com account is funded. Withdrawals work the same way — withdraw any asset to any supported chain. Access all your funds through your connected wallet. No bridging, no chain switching — just deposit, trade, and withdraw."
+    screenshots:
+      - /screenshots/near-dot-com-deposit.png
+    captions:
+      - "Depositing USDC from Solana into your near.com account — scan the QR code or copy the address"
     flow:
       - "BTC / ETH / SOL (external chains)"
       - "NEAR Intents"
@@ -147,10 +128,10 @@ The near.com integration demonstrates that NEAR Intents is production-ready at t
 
 ## Cross-Chain Custody
 
-Beyond swaps, near.com demonstrates cross-chain custody powered by NEAR Intents. Users can hold and manage assets across 31 chains from a single NEAR account — one wallet, one key, assets everywhere. No need to manage separate wallets for Bitcoin, Ethereum, and Solana.
+near.com is a unified interface for multi-chain assets. Users log in with one wallet — a passkey wallet, any EVM wallet (MetaMask, Rabby, etc.), or a NEAR native wallet — and that's the only key they ever need. From there, they can deposit from any supported chain to fund their account, and withdraw to any supported chain when they need to move assets out.
+
+While using near.com, the user never has to think about what chain they're on. Bitcoin, Ethereum, Solana, Zcash — it's all accessible from one place with one login. No juggling multiple wallets, no managing separate seed phrases, no switching between chain-specific apps. The complexity of 31 chains collapses into a single, seamless experience.
 
 ## Asset Onboarding
 
-For new NEAR users, near.com's swap feature is an on-ramp. A user discovering NEAR for the first time, holding BTC or ETH, can convert directly into NEAR without leaving the site. There's no friction point where they have to find an exchange, buy NEAR separately, and transfer it.
-
-This matters for ecosystem growth. Every chain and every wallet that integrates NEAR Intents can offer the same on-ramp.
+Depositing onto near.com functions like a centralized exchange — but it's fully non-custodial. Users get a deposit address for any supported asset, send their coins from anywhere (a wallet, an exchange, cold storage), and their near.com account is funded. All funds are accessible through their connected wallet. No bridging steps, no chain switching. Just deposit and go.

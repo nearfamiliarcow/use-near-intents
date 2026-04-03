@@ -3,13 +3,13 @@ name: Asset Onboarding
 slug: asset-onboarding
 icon: download
 tagline: "Turn any crypto holder into your user — they deposit from their chain, your app gets what it needs"
-coverImage: /screenshots/zodl-onboard-input.jpg
+coverImage: /screenshots/zodl-bitcoin-onboarding.jpg
 screenshots:
+  - src: /screenshots/zodl-bitcoin-onboarding.jpg
+    caption: "Send Bitcoin and receive ZEC in your ZODL wallet"
+    source: "ZODL"
   - src: /screenshots/zodl-onboard-input.jpg
     caption: "Selecting a source asset to deposit into ZODL — send ETH from Ethereum, receive ZEC in the app"
-    source: "ZODL"
-  - src: /screenshots/zodl-onboard-confirm.jpg
-    caption: "Confirming a cross-chain deposit in ZODL — one signature, assets arrive in ~30 seconds"
     source: "ZODL"
 relevantUserTypes:
   - single-chain-wallet
@@ -86,26 +86,26 @@ userStories:
       - "ZEC appears in ZODL wallet in ~30 seconds — ready to use"
     without: "Find a CEX that supports both ETH and ZEC, complete KYC, deposit ETH, trade to ZEC, withdraw to ZODL. ~30 min and ~3% in fees."
 howItWorksSteps:
-  - icon: LayoutGrid
-    title: User selects their source asset
-    detail: "Your deposit UI shows a chain and token selector. The user picks what they hold — BTC on Bitcoin, ETH on Ethereum, SOL on Solana, or any of 100+ assets across 31 chains. Your app defines the destination token it needs to receive."
+  - icon: Wallet
+    title: User picks what they hold
+    detail: "Your deposit UI shows a chain and token selector. The user picks what they already hold — BTC on Bitcoin, ETH on Ethereum, SOL on Solana, or any of 100+ assets across 31 chains. Your app configures the destination token it needs to receive. The user never has to think about your chain."
     color: "#627EEA"
     chainPill: Any asset, any chain
   - icon: Cpu
-    title: Intents routes the conversion
-    detail: "Solvers compete to convert the user's source asset to your app's required token at the best available rate. Settlement is handled trustlessly on NEAR. You configure your own fee, charged on top of each deposit."
+    title: NEAR Intents routes and converts
+    detail: "Solvers compete to convert the user's source asset to your app's required token at the best available rate — whether that's USDC on Base, stETH on Ethereum, or your native token on any supported chain. Settlement is handled trustlessly on NEAR. You configure your own fee, charged on each deposit."
     color: "#00c853"
     chainPill: NEAR Intents solver network
   - icon: PenLine
-    title: Sign once — or just send
-    detail: "If the user has a connected wallet, they sign one transaction on their source chain. If not, generate a static deposit address — the user sends from any wallet or exchange with no chain-specific wallet support needed."
+    title: One signature — or just send to an address
+    detail: "If the user has a connected wallet, they sign one transaction on their source chain. If not — or if they're withdrawing from a CEX — generate a static deposit address. The user sends BTC from Coinbase or SOL from Phantom with no chain-specific wallet setup, no bridging app, no extra steps."
     color: "#F7931A"
-    chainPill: Two ways in
+    chainPill: Two ways to fund
   - icon: CheckCircle
-    title: Your app receives the right token (~30s)
-    detail: "The required token lands on your chain, ready to use — converted, settled, and delivered in a single step. No bridging UI to explain, no failed transactions, no user drop-off."
+    title: Your app receives exactly what it needs (~30s)
+    detail: "The configured token lands in your app on your chain — converted, settled, and delivered in one step. NEAR Intents can also perform additional actions on arrival, like depositing the asset directly into a smart contract. No bridge UI to explain, no failed transactions from gas estimation, no user drop-off at the deposit screen. The conversion is invisible to the user."
     color: "#9945FF"
-    chainPill: Lands on your chain
+    chainPill: Arrives on your chain
 revenueModel:
   feeStructure: "Configurable fee per deposit — typically 20 to 100 basis points. Fees are fully customizable per route, so you can set lower fees for like-to-like deposits and higher fees for cross-asset or cross-chain deposits. You keep the fees you configure."
   revShare: ""

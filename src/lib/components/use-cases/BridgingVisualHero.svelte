@@ -10,7 +10,9 @@
 		ethereum: 'https://coin-images.coingecko.com/coins/images/279/small/ethereum.png',
 		arbitrum: 'https://coin-images.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg',
 		base: 'https://coin-images.coingecko.com/coins/images/31164/small/base.png',
-		dogecoin: 'https://coin-images.coingecko.com/coins/images/5/small/dogecoin.png'
+		dogecoin: 'https://coin-images.coingecko.com/coins/images/5/small/dogecoin.png',
+		xrp: 'https://coin-images.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png',
+		ton: 'https://coin-images.coingecko.com/coins/images/17980/small/ton_symbol.png'
 	};
 
 	// Bridging scenarios: same or different asset, source chain → destination chain
@@ -44,30 +46,30 @@
 			to: {
 				symbol: 'BTC',
 				logo: 'https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png',
-				chain: 'Solana',
-				chainKey: 'solana',
-				color: '#9945FF'
+				chain: 'TON',
+				chainKey: 'ton',
+				color: '#0098EA'
 			},
 			amount: '0.05',
-			label: 'BTC → Solana'
+			label: 'BTC → TON'
 		},
 		{
 			from: {
-				symbol: 'ETH',
-				logo: 'https://coin-images.coingecko.com/coins/images/279/small/ethereum.png',
-				chain: 'Ethereum',
-				chainKey: 'ethereum',
-				color: '#627EEA'
+				symbol: 'XRP',
+				logo: 'https://coin-images.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png',
+				chain: 'XRP Ledger',
+				chainKey: 'xrp',
+				color: '#23292F'
 			},
 			to: {
-				symbol: 'ETH',
-				logo: 'https://coin-images.coingecko.com/coins/images/279/small/ethereum.png',
+				symbol: 'XRP',
+				logo: 'https://coin-images.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png',
 				chain: 'Arbitrum',
 				chainKey: 'arbitrum',
 				color: '#28A0F0'
 			},
-			amount: '2.0',
-			label: 'L1 → L2'
+			amount: '500',
+			label: 'XRP → Arbitrum'
 		},
 		{
 			from: {
@@ -227,35 +229,13 @@
 		<div class="flex flex-col gap-4 text-center sm:text-left">
 			<div>
 				<h2 class="text-2xl font-bold leading-snug text-near-text sm:text-3xl">
-					New assets.<br />New users.
+					New assets, new markets.<br />Bridge Any Asset to Your Chain.
 				</h2>
 				<p class="mt-3 text-sm leading-relaxed text-near-text-secondary sm:text-base">
-					Bridge assets from any chain to any chain. UTXO chains like Zcash, Bitcoin, and Dogecoin included — no other bridge protocol handles them natively.
+					Any asset NEAR Intents supports can be bridged to any chain we support — and every bridged asset instantly has cross-chain liquidity across all 31 chains. UTXO chains like Zcash, Bitcoin, and Dogecoin included — no other bridge protocol handles them natively.
 				</p>
 			</div>
 
-			<!-- Quick stats row -->
-			<div class="flex flex-wrap justify-center gap-4 sm:justify-start">
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">31</span>
-					<span class="text-[11px] text-near-text-secondary">chains</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">6</span>
-					<span class="text-[11px] text-near-text-secondary">UTXO chains</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">~30s</span>
-					<span class="text-[11px] text-near-text-secondary">settlement</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">1 sig</span>
-					<span class="text-[11px] text-near-text-secondary">per bridge</span>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

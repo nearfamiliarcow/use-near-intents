@@ -15,6 +15,7 @@
 	import CrossPayVisualHero from '$lib/components/use-cases/CrossPayVisualHero.svelte';
 	import OnboardingVisualHero from '$lib/components/use-cases/OnboardingVisualHero.svelte';
 	import BridgingVisualHero from '$lib/components/use-cases/BridgingVisualHero.svelte';
+	import CustodyVisualHero from '$lib/components/use-cases/CustodyVisualHero.svelte';
 	import PartnerScreenshots from '$lib/components/use-cases/PartnerScreenshots.svelte';
 	import type { PageData } from './$types';
 	import type { Component } from 'svelte';
@@ -35,7 +36,8 @@
 		SwapDemo: SwapVisualHero,
 		CrossPayDemo: CrossPayVisualHero,
 		OnboardingDemo: OnboardingVisualHero,
-		BridgingDemo: BridgingVisualHero
+		BridgingDemo: BridgingVisualHero,
+		CustodyDemo: CustodyVisualHero
 	};
 
 	const VisualHero = $derived(

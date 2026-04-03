@@ -2,7 +2,7 @@
 name: Bridging
 slug: bridging
 icon: waypoints
-tagline: "Bridge any supported asset to any supported chain — bring exotic assets onto your chain. As new chains and assets join the network, assets can be bridged to them as well — no per-route setup needed."
+tagline: "Bridge any supported asset to any supported chain — bring exotic assets onto your chain. As new chains are added to NEAR Intents, any asset can be bridged to them automatically — no per-route setup needed."
 coverImage: /screenshots/zcash-live-on-raydium.jpg
 screenshots:
   - src: /screenshots/zcash-live-on-raydium.jpg
@@ -79,24 +79,24 @@ userStories:
 howItWorksSteps:
   - icon: Waypoints
     title: Select source & destination
-    detail: "Choose the asset you want to bridge and the destination chain. ZEC to Solana, BTC to Base, ETH to Arbitrum — any of 31 chains."
+    detail: "Choose the asset you want to bridge and the destination chain. ZEC to Solana, BTC to TON, XRP to Arbitrum, DOGE to Base — any supported asset to any supported chain."
     color: "#F4B728"
-    chainPill: Any chain → any chain
-  - icon: Cpu
-    title: Intents finds the route
-    detail: "Solvers compete to fill the bridge at the best rate. UTXO chains like Zcash, Bitcoin, and Dogecoin are handled natively — no wrapped tokens required on the source side."
-    color: "#00c853"
-    chainPill: NEAR Intents solver network
-  - icon: PenLine
-    title: Sign one transaction
-    detail: "One signature on the source chain. For UTXO chains, a deposit address is generated — send from any wallet or exchange."
+    chainPill: Any asset → any chain
+  - icon: Send
+    title: Send your funds
+    detail: "Send the native asset from your wallet. For UTXO chains like Zcash, Bitcoin, and Dogecoin, a deposit address is generated — send from any wallet or exchange. One transaction, one signature."
     color: "#9945FF"
     chainPill: Source chain
-  - icon: CheckCircle
-    title: Assets arrive (~30s)
-    detail: "The bridged asset lands on the destination chain, ready to use in DeFi. No manual claiming, no second transaction."
+  - icon: Shield
+    title: NEAR Intents custodies & issues
+    detail: "NEAR Intents custodies the native asset and issues a wrapped version on the destination chain. No third-party bridge needed — NEAR Intents handles the wrapping and issuance directly."
+    color: "#00c853"
+    chainPill: NEAR Intents network
+  - icon: Zap
+    title: Wrapped asset arrives — with instant liquidity
+    detail: "The wrapped asset lands on the destination chain ready to use. Because bridged assets are part of the NEAR Intents cross-chain network, every NEAR Intents user instantly has access to liquidity for the wrapped asset across all 31 chains."
     color: "#28A0F0"
-    chainPill: Destination chain
+    chainPill: Destination chain + cross-chain liquidity
 revenueModel:
   feeStructure: ""
   revShare: ""

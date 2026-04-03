@@ -3,6 +3,7 @@ name: Chain Integration
 slug: chain-integration
 icon: blocks
 tagline: "Connect your chain to 31+ others — bring assets and users to your ecosystem"
+coverImage: /screenshots/solana-chain-integration.png
 relevantUserTypes:
   - blockchain
 demoComponent: null

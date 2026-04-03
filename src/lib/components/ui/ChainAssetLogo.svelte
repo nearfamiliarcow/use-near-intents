@@ -36,6 +36,16 @@
 	let assetError = $state(false);
 	let chainError = $state(false);
 
+	// Reset error states when logos change
+	$effect(() => {
+		assetLogo;
+		assetError = false;
+	});
+	$effect(() => {
+		chainLogo;
+		chainError = false;
+	});
+
 	const sizes = {
 		sm: { asset: 'h-6 w-6', chain: 'h-3 w-3', chainOffset: '-bottom-0.5 -right-0.5', chainBorder: 'border', container: 'h-6 w-6' },
 		md: { asset: 'h-8 w-8', chain: 'h-4 w-4', chainOffset: '-bottom-0.5 -right-0.5', chainBorder: 'border-[1.5px]', container: 'h-8 w-8' },

@@ -77,7 +77,7 @@ howItWorksSteps:
     chainPill: Two ways in
   - icon: CheckCircle
     title: Recipient gets exact stablecoins
-    detail: "The recipient receives precisely the stablecoin amount requested (USDC, USDT, etc.) on their chosen chain — regardless of what the sender paid with. No slippage, no shortfall, no partial fills."
+    detail: "The recipient receives precisely the stablecoin amount requested (USDC, USDT, etc.) on their chosen chain — regardless of what the sender paid with. If the sender's payment doesn't cover the full amount, they receive a refund automatically."
     color: "#9945FF"
     chainPill: Exact stablecoin delivery guaranteed
 revenueModel:

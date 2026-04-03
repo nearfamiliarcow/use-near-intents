@@ -14,6 +14,7 @@ export interface CaseStudy {
 	useCases: CaseStudyUseCaseJoin[];
 	content: string;
 	coverImage?: string;
+	sortOrder: number;
 	transformation?: TransformationData;
 	storyBeats?: StoryBeat[];
 }
