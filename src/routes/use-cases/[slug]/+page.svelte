@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { browser } from '$app/environment';
-	import { getUserStoriesForUserType } from '$lib/content';
+	import { getUserStoriesForUserType } from '$lib/utils/use-case-helpers';
 	import { ExternalLink } from 'lucide-svelte';
 	import Card from '$lib/components/ui/Card.svelte';
 	import Badge from '$lib/components/ui/Badge.svelte';

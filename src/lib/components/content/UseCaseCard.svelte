@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { UseCase } from '$lib/types';
-	import { getCaseStudiesByUseCase, getRevenueHookForUserType } from '$lib/content';
+	import { getRevenueHookForUserType } from '$lib/utils/use-case-helpers';
 	import { getUserType } from '$lib/data/user-types';
 	import {
 		ArrowLeftRight,
@@ -15,14 +15,14 @@
 	} from 'lucide-svelte';
 
 	interface Props {
-		useCase: UseCase;
+		useCase: UseCase & { caseStudyCount?: number; caseStudyLogos?: string[] };
 		userTypeFilter?: string;
 	}
 
 	let { useCase, userTypeFilter = '' }: Props = $props();
 
-	const caseStudies = $derived(getCaseStudiesByUseCase(useCase.slug));
-	const caseStudyCount = $derived(caseStudies.length);
+	const caseStudyCount = $derived(useCase.caseStudyCount ?? 0);
+	const caseStudyLogos = $derived(useCase.caseStudyLogos ?? []);
 	const revenueHook = $derived(
 		userTypeFilter ? getRevenueHookForUserType(useCase, userTypeFilter) : ''
 	);
@@ -205,12 +205,11 @@
 					{#if caseStudyCount > 0}
 						<div class="flex shrink-0 items-center gap-1.5">
 							<div class="flex items-center">
-								{#each caseStudies.slice(0, 3) as cs, i}
-									{#if cs.logo}
+								{#each caseStudyLogos as logo, i}
+									{#if logo}
 										<img
-											src={cs.logo}
-											alt={cs.name}
-											title={cs.name}
+											src={logo}
+											alt="Partner logo"
 											class="h-5 w-5 rounded-full border border-near-surface bg-near-bg object-cover shadow-sm {i > 0 ? '-ml-1.5' : ''}"
 											style="z-index: {3 - i}"
 										/>
