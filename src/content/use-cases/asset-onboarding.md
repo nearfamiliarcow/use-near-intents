@@ -26,7 +26,7 @@ relevantUserTypes:
   - bridge
   - payment-app
 demoComponent: OnboardingDemo
-sortOrder: 3
+sortOrder: 4
 revenueHooks:
   default: "Every cross-chain deposit into your app = a user you would have lost to bridging friction"
   single-chain-wallet: "Anyone with crypto anywhere can become your user — no CEX or bridge required"
@@ -94,7 +94,7 @@ howItWorksSteps:
   - icon: Cpu
     title: NEAR Intents routes and converts
     detail: "Solvers compete to convert the user's source asset to your app's required token at the best available rate — whether that's USDC on Base, stETH on Ethereum, or your native token on any supported chain. Settlement is handled trustlessly on NEAR. You configure your own fee, charged on each deposit."
-    color: "#00c853"
+    color: "#fb4d01"
     chainPill: NEAR Intents solver network
   - icon: PenLine
     title: One signature — or just send to an address

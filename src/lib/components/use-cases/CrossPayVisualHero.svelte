@@ -64,7 +64,7 @@
 	<!-- Background decoration -->
 	<div
 		class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-[0.06]"
-		style="background: radial-gradient(circle, #00c853 0%, transparent 70%)"
+		style="background: radial-gradient(circle, #fb4d01 0%, transparent 70%)"
 		aria-hidden="true"
 	></div>
 	<div
@@ -101,7 +101,7 @@
 				<div class="border-b border-near-border px-4 py-3">
 					<div class="flex items-center justify-between">
 						<span class="text-sm font-bold text-near-text">Cross-Chain Payment</span>
-						<span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-600">
+						<span class="rounded-full bg-near-orange-light px-2 py-0.5 text-[10px] font-semibold text-near-orange">
 							31 chains
 						</span>
 					</div>
@@ -147,7 +147,7 @@
 					<!-- Arrow -->
 					<div class="my-3 flex items-center justify-center">
 						<div class="flex h-8 w-8 items-center justify-center rounded-full border border-near-border bg-near-surface shadow-sm">
-							<ArrowRight size={14} class="rotate-90 text-near-green-dark" />
+							<ArrowRight size={14} class="rotate-90 text-near-orange" />
 						</div>
 					</div>
 
@@ -175,14 +175,14 @@
 							<p class="text-[10px] text-near-gray-medium">{scenario.recipient.chain}</p>
 						</div>
 						<span
-							class="text-sm font-semibold text-near-green-dark transition-all duration-300"
+							class="text-sm font-semibold text-near-orange transition-all duration-300"
 							style="opacity: {animating ? 0 : 1}"
 						>{scenario.amount} exact</span>
 					</div>
 
 					<!-- CTA button -->
 					<button
-						class="mt-4 w-full rounded-xl bg-near-green-dark py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
+						class="mt-4 w-full rounded-xl bg-near-orange py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
 					>
 						Pay — 1 signature
 					</button>
@@ -191,7 +191,7 @@
 				<!-- Footer: powered by -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Intents</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Intents</span>
 					</p>
 				</div>
 			</div>
@@ -202,7 +202,7 @@
 					<button
 						onclick={() => { activeScenario = i; }}
 						class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
-						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#00963f' : 'var(--color-near-border)'}"
+						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#fb4d01' : 'var(--color-near-border)'}"
 						aria-label="Example {i + 1}"
 						aria-pressed={activeScenario === i}
 					></button>
@@ -255,7 +255,7 @@
 				<!-- Footer: powered by -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Intents</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Intents</span>
 					</p>
 				</div>
 			</div>

@@ -10,6 +10,8 @@
 		Blocks,
 		ShieldCheck,
 		Waypoints,
+		TrendingUp,
+		Radio,
 		ArrowRight,
 		type Icon as LucideIcon
 	} from 'lucide-svelte';
@@ -107,17 +109,39 @@
 			hookBorder: 'border-amber-200',
 			badgeBg: 'bg-amber-50',
 			badgeText: 'text-amber-700'
+		},
+		'cross-chain-earn': {
+			bg: 'hover:border-teal-300',
+			iconBg: 'bg-teal-100',
+			iconColor: 'text-teal-600',
+			accent: 'text-teal-600',
+			hookBg: 'bg-teal-50',
+			hookText: 'text-teal-800',
+			hookBorder: 'border-teal-200',
+			badgeBg: 'bg-teal-50',
+			badgeText: 'text-teal-700'
+		},
+		'token-listing': {
+			bg: 'hover:border-rose-300',
+			iconBg: 'bg-rose-100',
+			iconColor: 'text-rose-600',
+			accent: 'text-rose-600',
+			hookBg: 'bg-rose-50',
+			hookText: 'text-rose-800',
+			hookBorder: 'border-rose-200',
+			badgeBg: 'bg-rose-50',
+			badgeText: 'text-rose-700'
 		}
 	};
 
 	const fallbackScheme = {
-		bg: 'hover:border-near-green/40',
-		iconBg: 'bg-near-green-light',
-		iconColor: 'text-near-green-dark',
-		accent: 'text-near-green-dark',
-		hookBg: 'bg-emerald-50',
-		hookText: 'text-emerald-800',
-		hookBorder: 'border-emerald-200',
+		bg: 'hover:border-near-orange/40',
+		iconBg: 'bg-near-orange-light',
+		iconColor: 'text-near-orange',
+		accent: 'text-near-orange',
+		hookBg: 'bg-near-orange-light',
+		hookText: 'text-near-dark',
+		hookBorder: 'border-near-orange/20',
 		badgeBg: 'bg-gray-100',
 		badgeText: 'text-near-light-gray'
 	};
@@ -130,7 +154,9 @@
 		download: Download,
 		blocks: Blocks,
 		'shield-check': ShieldCheck,
-		waypoints: Waypoints
+		waypoints: Waypoints,
+		'trending-up': TrendingUp,
+		radio: Radio
 	};
 
 	const IconComponent = $derived(iconMap[useCase.icon]);

@@ -16,6 +16,8 @@
 	import OnboardingVisualHero from '$lib/components/use-cases/OnboardingVisualHero.svelte';
 	import BridgingVisualHero from '$lib/components/use-cases/BridgingVisualHero.svelte';
 	import CustodyVisualHero from '$lib/components/use-cases/CustodyVisualHero.svelte';
+	import EarnVisualHero from '$lib/components/use-cases/EarnVisualHero.svelte';
+	import DistributionVisualHero from '$lib/components/use-cases/DistributionVisualHero.svelte';
 	import PartnerScreenshots from '$lib/components/use-cases/PartnerScreenshots.svelte';
 	import type { PageData } from './$types';
 	import type { Component } from 'svelte';
@@ -37,7 +39,9 @@
 		CrossPayDemo: CrossPayVisualHero,
 		OnboardingDemo: OnboardingVisualHero,
 		BridgingDemo: BridgingVisualHero,
-		CustodyDemo: CustodyVisualHero
+		CustodyDemo: CustodyVisualHero,
+		EarnDemo: EarnVisualHero,
+		DistributionDemo: DistributionVisualHero
 	};
 
 	const VisualHero = $derived(
@@ -188,7 +192,7 @@
 							href={partner.url ?? '#'}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex items-center gap-2.5 rounded-lg border border-near-border bg-near-surface px-4 py-2.5 shadow-sm transition-all hover:border-near-green/40 hover:shadow-md"
+							class="flex items-center gap-2.5 rounded-lg border border-near-border bg-near-surface px-4 py-2.5 shadow-sm transition-all hover:border-near-orange/40 hover:shadow-md"
 						>
 							{#if partner.logo}
 								<img
@@ -317,7 +321,7 @@
 			href="https://docs.near-intents.org"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="mt-5 inline-block rounded-lg bg-near-green-dark px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-6"
+			class="mt-5 inline-block rounded-lg bg-near-orange px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-6"
 		>
 			Read the Integration Docs
 		</a>

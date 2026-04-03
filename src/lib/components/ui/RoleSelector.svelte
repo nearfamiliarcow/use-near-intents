@@ -51,8 +51,8 @@
 		<button
 			onclick={() => onSelect('')}
 			class="flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all {selected === ''
-				? 'border-near-green-dark bg-near-green-dark text-white shadow-sm'
-				: 'border-near-border bg-near-surface text-near-light-gray hover:border-near-green/50 hover:text-near-text'}"
+				? 'border-near-orange bg-near-orange text-white shadow-sm'
+				: 'border-near-border bg-near-surface text-near-light-gray hover:border-near-orange/50 hover:text-near-text'}"
 		>
 			<span>All use cases</span>
 		</button>
@@ -61,8 +61,8 @@
 			<button
 				onclick={() => onSelect(ut.slug)}
 				class="flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all {selected === ut.slug
-					? 'border-near-green-dark bg-near-green-dark text-white shadow-sm'
-					: 'border-near-border bg-near-surface text-near-light-gray hover:border-near-green/50 hover:text-near-text'}"
+					? 'border-near-orange bg-near-orange text-white shadow-sm'
+					: 'border-near-border bg-near-surface text-near-light-gray hover:border-near-orange/50 hover:text-near-text'}"
 				title={ut.question}
 			>
 				{#if IconComponent}

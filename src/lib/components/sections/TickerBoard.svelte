@@ -93,7 +93,7 @@
 			<div class="relative">
 				<button
 					class="flex w-full items-center gap-2.5 rounded-lg border bg-near-surface px-3 py-2.5 text-left shadow-sm transition-all sm:gap-3 sm:px-4 sm:py-3
-						{active ? 'border-near-green-dark/40 bg-near-green-light shadow-md z-20' : 'border-near-border hover:border-near-green/30'}"
+						{active ? 'border-near-orange/40 bg-near-orange-light shadow-md z-20' : 'border-near-border hover:border-near-orange/30'}"
 					onmouseenter={() => (hoveredSymbol = token.symbol)}
 					onmouseleave={() => (hoveredSymbol = null)}
 					onclick={() => toggleClick(token.symbol)}
@@ -153,7 +153,7 @@
 		<div class="mt-4 text-center">
 			<button
 				onclick={() => (expanded = !expanded)}
-				class="inline-flex items-center gap-1.5 rounded-full border border-near-border bg-near-surface px-4 py-2 text-sm font-medium text-near-text-secondary shadow-sm transition-colors hover:border-near-green-dark/30 hover:text-near-text"
+				class="inline-flex items-center gap-1.5 rounded-full border border-near-border bg-near-surface px-4 py-2 text-sm font-medium text-near-text-secondary shadow-sm transition-colors hover:border-near-orange/30 hover:text-near-text"
 			>
 				{#if expanded}
 					Show less

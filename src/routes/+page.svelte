@@ -15,10 +15,10 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+<section class="mx-auto max-w-7xl px-4 py-8 text-center sm:px-6 sm:py-12 lg:px-8 lg:py-14">
 	<h1 class="text-3xl font-bold tracking-tight text-near-text sm:text-5xl lg:text-6xl">
 		See how teams use
-		<span class="text-near-green-dark">NEAR Intents</span>
+		<span class="text-near-orange">NEAR Intents</span>
 	</h1>
 </section>
 
@@ -47,7 +47,7 @@
 			href="https://docs.near-intents.org"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="mt-6 inline-block rounded-lg bg-near-green-dark px-8 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-8"
+			class="mt-6 inline-block rounded-lg bg-near-orange px-8 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-8"
 		>
 			Read the Docs
 		</a>

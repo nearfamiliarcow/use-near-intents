@@ -157,7 +157,7 @@
 			{#each screenshots as shot, i}
 				<button
 					onclick={() => openLightbox(i)}
-					class="group flex w-[calc(50%-8px)] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-near-border bg-near-surface shadow-sm transition-all duration-200 hover:border-near-green/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-near-green-dark sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
+					class="group flex w-[calc(50%-8px)] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-near-border bg-near-surface shadow-sm transition-all duration-200 hover:border-near-orange/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-near-orange sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
 					aria-label="View screenshot: {shot.caption}"
 				>
 					<!-- Phone frame effect — centered vertically -->
@@ -195,7 +195,7 @@
 								<span class="text-[10px] font-semibold text-near-text-secondary">{shot.partnerName}</span>
 							</div>
 						{:else}
-							<p class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-near-green-dark">
+							<p class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-near-orange">
 								{shot.partnerName}
 							</p>
 						{/if}

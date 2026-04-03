@@ -69,7 +69,7 @@
 			{#if i < steps.length - 1}
 				<div
 					class="mx-1 h-0.5 flex-1 self-start mt-5 transition-all duration-500"
-					style="background-color: {activeStep > i ? '#00c853' : 'var(--color-near-border)'}"
+					style="background-color: {activeStep > i ? '#fb4d01' : 'var(--color-near-border)'}"
 					aria-hidden="true"
 				></div>
 			{/if}

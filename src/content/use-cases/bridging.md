@@ -88,12 +88,12 @@ howItWorksSteps:
     color: "#9945FF"
     chainPill: Source chain
   - icon: Shield
-    title: NEAR Intents custodies & issues
+    title: NEAR Intents receives your asset
     detail: "NEAR Intents custodies the native asset and issues a wrapped version on the destination chain. No third-party bridge needed — NEAR Intents handles the wrapping and issuance directly."
-    color: "#00c853"
+    color: "#fb4d01"
     chainPill: NEAR Intents network
   - icon: Zap
-    title: Wrapped asset arrives — with instant liquidity
+    title: Wrapped asset is issued on a new chain
     detail: "The wrapped asset lands on the destination chain ready to use. Because bridged assets are part of the NEAR Intents cross-chain network, every NEAR Intents user instantly has access to liquidity for the wrapped asset across all 31 chains."
     color: "#28A0F0"
     chainPill: Destination chain + cross-chain liquidity
@@ -102,44 +102,8 @@ revenueModel:
   revShare: ""
 ---
 
-## What is Bridging?
+## Bridging
 
-NEAR Intents can bridge **any supported asset to any supported chain**. ZEC to Solana, BTC to NEAR, ETH to Base, STRK to Arbitrum — any combination works. The examples on this page are just that: examples. As new chains and assets are added to the network, they're immediately bridgeable to every other supported chain. No per-route configuration, no chain-by-chain setup.
+NEAR Intents can bridge any supported asset to any supported chain — ZEC to Solana, BTC to NEAR, DOGE to Base, STRK to Arbitrum, any combination. When new chains are added to the network, your asset can be bridged there too — automatically. No swap fees, no slippage — bridging is one-to-one. UTXO chains like Bitcoin, Zcash, and Dogecoin are supported natively.
 
-NEAR Intents treats bridging as a one-step user action: the user selects where their assets are and where they want them. NEAR Intents handles the routing, conversion, and delivery — including UTXO chains that no other protocol supports natively.
-
-## How it Works
-
-1. **User selects source asset and destination chain** in your app's UI
-2. **NEAR Intents previews the bridge route** — asset received, estimated time, fees
-3. **User signs one transaction** on their source chain
-4. **NEAR Intents solver network routes the assets** — handling conversion and cross-chain delivery
-5. **Assets arrive on the destination chain** in roughly 30 seconds
-
-No bridge interface. No wrapped token complexity. No second transaction.
-
-## Bridging vs. Cross-Chain Swaps
-
-These two use cases are related but distinct:
-
-**Cross-Chain Swaps** are about exchanging *different* assets across chains — swap ETH for SOL, or USDC on Arbitrum for BTC on Bitcoin. The user wants a different asset at the end.
-
-**Bridging** is about moving assets to a *new destination* — same or equivalent asset, new chain. The goal is participation: get onto a chain or into an app that the user couldn't access before. The ZEC holder bridging to Solana isn't trying to change what they hold; they're trying to join a new ecosystem.
-
-In practice, many bridge transactions involve both — moving assets and converting them — but the intent is different, and so is the value proposition to the destination chain.
-
-## The UTXO Advantage
-
-Most bridges don't support UTXO chains at all. Bitcoin, Zcash, Dogecoin, Litecoin, Bitcoin Cash, and Dash operate on fundamentally different transaction models than EVM chains, and few protocols have built the infrastructure to handle them.
-
-NEAR Intents does. This means chains and apps that integrate NEAR Intents can accept deposits from the entire UTXO universe — not just wrapped versions through intermediary chains, but native assets straight from the source wallet.
-
-For any L2 or app looking to attract Bitcoin-native capital, this is a meaningful differentiator. BTC holders represent the largest single source of crypto capital outside of stablecoins.
-
-## What Your Chain or App Gets
-
-**For chains:** Every new chain that joins NEAR Intents can accept assets from all 31 other supported chains. Your ecosystem gets a universal on-ramp without requiring each individual DeFi app to integrate bridges separately.
-
-**For DEXs and aggregators:** Users from 31 chains can deposit directly into your pools and interfaces. You become the entry point for your chain's ecosystem, not just a DEX for users already on your chain.
-
-**For lending and yield protocols:** Collateral and deposit friction drops to near zero. Any asset holder on any chain can engage with your protocol in one transaction.
+We make bridging your asset to other chains extremely simple and convenient — and give it access to all the liquidity of the NEAR Intents protocol.

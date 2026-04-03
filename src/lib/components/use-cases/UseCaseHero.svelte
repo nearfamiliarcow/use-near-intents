@@ -33,13 +33,13 @@
 <div class="relative overflow-hidden border-b border-near-border bg-gradient-to-b from-near-surface to-near-bg">
 	<div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
 		<div class="text-center">
-			<div class="mb-4 inline-flex items-center gap-2 rounded-full border border-near-green/30 bg-near-green-light px-3 py-1 text-xs font-semibold text-near-green-dark">
-				<span class="h-1.5 w-1.5 animate-pulse rounded-full bg-near-green-dark"></span>
+			<div class="mb-4 inline-flex items-center gap-2 rounded-full border border-near-orange/30 bg-near-orange-light px-3 py-1 text-xs font-semibold text-near-orange">
+				<span class="h-1.5 w-1.5 animate-pulse rounded-full bg-near-orange"></span>
 				31 Chains Supported
 			</div>
 			<h1 class="text-3xl font-bold tracking-tight text-near-text sm:text-4xl lg:text-5xl">
 				What will you build with
-				<span class="text-near-green-dark">NEAR Intents?</span>
+				<span class="text-near-orange">NEAR Intents?</span>
 			</h1>
 			<p class="mx-auto mt-4 max-w-2xl text-base text-near-text-secondary sm:text-lg">
 				Cross-chain capabilities — swaps, payments, deposits, custody — that slot into any product in days, not months.
@@ -103,9 +103,9 @@
 					</svg>
 
 					<!-- NEAR hub node -->
-					<div class="relative z-10 flex h-16 w-16 flex-col items-center justify-center rounded-full border-2 border-near-green bg-near-green-light shadow-lg sm:h-20 sm:w-20" style="box-shadow: 0 0 20px rgba(0,200,83,0.2)">
-						<span class="text-[10px] font-bold text-near-green-dark sm:text-xs">NEAR</span>
-						<span class="text-[8px] text-near-green-dark/70 sm:text-[10px]">Intents</span>
+					<div class="relative z-10 flex h-16 w-16 flex-col items-center justify-center rounded-full border-2 border-near-orange bg-near-orange-light shadow-lg sm:h-20 sm:w-20" style="box-shadow: 0 0 20px rgba(251,77,1,0.2)">
+						<span class="text-[10px] font-bold text-near-orange sm:text-xs">NEAR</span>
+						<span class="text-[8px] text-near-orange/70 sm:text-[10px]">Intents</span>
 					</div>
 				</div>
 

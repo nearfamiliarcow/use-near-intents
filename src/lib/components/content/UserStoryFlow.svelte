@@ -11,7 +11,7 @@
 
 <Card>
 	<div class="mb-3 sm:mb-4">
-		<span class="text-sm font-semibold text-near-green-dark">{story.persona}</span>
+		<span class="text-sm font-semibold text-near-orange">{story.persona}</span>
 		<span class="text-sm text-near-text-secondary"> — {story.context}</span>
 		{#if story.app}
 			<span class="text-sm text-near-text-secondary"> using <strong class="text-near-text">{story.app}</strong></span>
@@ -22,7 +22,7 @@
 	<ol class="space-y-2.5 sm:space-y-3">
 		{#each story.steps as step, i}
 			<li class="flex items-start gap-2.5 sm:gap-3">
-				<span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-near-green-light text-[10px] font-bold text-near-green-dark sm:h-6 sm:w-6 sm:text-xs">
+				<span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-near-orange-light text-[10px] font-bold text-near-orange sm:h-6 sm:w-6 sm:text-xs">
 					{i + 1}
 				</span>
 				<span class="text-sm text-near-text">{step}</span>

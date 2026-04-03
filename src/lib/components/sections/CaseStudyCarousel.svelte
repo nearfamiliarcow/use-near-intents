@@ -65,7 +65,7 @@
 				<h2 class="text-xl font-bold text-near-text sm:text-2xl">Case Studies</h2>
 				<p class="mt-1 text-sm text-near-text-secondary">Real partners building with NEAR Intents</p>
 			</div>
-			<a href="{base}/case-studies" class="text-sm font-medium text-near-green-dark hover:underline">View all →</a>
+			<a href="{base}/case-studies" class="text-sm font-medium text-near-orange hover:underline">View all →</a>
 		</div>
 
 		<div class="overflow-hidden rounded-2xl border border-near-border bg-near-surface shadow-sm">
@@ -98,8 +98,8 @@
 						<div class="mt-5 space-y-2 sm:mt-6">
 							{#each active.useCases.slice(0, 3) as uc}
 								<div class="flex items-baseline gap-2.5">
-									<div class="h-1.5 w-1.5 shrink-0 translate-y-[-1px] rounded-full bg-near-green-dark"></div>
-									<a href="{base}/use-cases/{uc.useCase}" class="text-sm text-near-text hover:text-near-green-dark">
+									<div class="h-1.5 w-1.5 shrink-0 translate-y-[-1px] rounded-full bg-near-orange"></div>
+									<a href="{base}/use-cases/{uc.useCase}" class="text-sm text-near-text hover:text-near-orange">
 										<span class="font-medium">{uc.useCase.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</span>
 										<span class="text-near-text-secondary"> — {uc.summary.split('—')[0].split('.')[0]}</span>
 									</a>
@@ -111,7 +111,7 @@
 					<div class="mt-6 sm:mt-8">
 						<a
 							href="{base}/case-studies/{active.slug}"
-							class="inline-flex items-center gap-2 rounded-lg bg-near-green-dark px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+							class="inline-flex items-center gap-2 rounded-lg bg-near-orange px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
 						>
 							Read full case study
 							<ChevronRight size={16} />
@@ -161,7 +161,7 @@
 						{#each caseStudies as _, i}
 							<button
 								onclick={() => goTo(i)}
-								class="h-2 rounded-full transition-all {i === activeIndex ? 'w-6 bg-near-green-dark' : 'w-2 bg-gray-200 hover:bg-gray-300'}"
+								class="h-2 rounded-full transition-all {i === activeIndex ? 'w-6 bg-near-orange' : 'w-2 bg-gray-200 hover:bg-gray-300'}"
 								aria-label="Go to case study {i + 1}"
 							></button>
 						{/each}

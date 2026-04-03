@@ -56,7 +56,7 @@
 	<!-- Background decoration -->
 	<div
 		class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-[0.06]"
-		style="background: radial-gradient(circle, #00c853 0%, transparent 70%)"
+		style="background: radial-gradient(circle, #fb4d01 0%, transparent 70%)"
 		aria-hidden="true"
 	></div>
 	<div
@@ -93,7 +93,7 @@
 				<div class="border-b border-near-border px-4 py-3">
 					<div class="flex items-center justify-between">
 						<span class="text-sm font-bold text-near-text">Cross-Chain Swap</span>
-						<span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-600">
+						<span class="rounded-full bg-near-orange-light px-2 py-0.5 text-[10px] font-semibold text-near-orange">
 							31 chains
 						</span>
 					</div>
@@ -129,7 +129,7 @@
 					<!-- Swap arrow -->
 					<div class="my-3 flex items-center justify-center">
 						<div class="flex h-8 w-8 items-center justify-center rounded-full border border-near-border bg-near-surface shadow-sm">
-							<ArrowRight size={14} class="rotate-90 text-near-green-dark" />
+							<ArrowRight size={14} class="rotate-90 text-near-orange" />
 						</div>
 					</div>
 
@@ -157,14 +157,14 @@
 							<p class="text-[10px] text-near-gray-medium">{pair.to.chain}</p>
 						</div>
 						<span
-							class="text-sm font-semibold text-near-green-dark transition-all duration-300"
+							class="text-sm font-semibold text-near-orange transition-all duration-300"
 							style="opacity: {animating ? 0 : 1}"
 						>{pair.toAmount}</span>
 					</div>
 
 					<!-- CTA button -->
 					<button
-						class="mt-4 w-full rounded-xl bg-near-green-dark py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
+						class="mt-4 w-full rounded-xl bg-near-orange py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
 					>
 						Swap — 1 signature
 					</button>
@@ -173,7 +173,7 @@
 				<!-- Footer: powered by -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Intents</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Intents</span>
 					</p>
 				</div>
 			</div>
@@ -184,7 +184,7 @@
 					<button
 						onclick={() => { activePair = i; }}
 						class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
-						style="width: {activePair === i ? '16px' : '6px'}; background-color: {activePair === i ? '#00963f' : 'var(--color-near-border)'}"
+						style="width: {activePair === i ? '16px' : '6px'}; background-color: {activePair === i ? '#fb4d01' : 'var(--color-near-border)'}"
 						aria-label="Example {i + 1}"
 						aria-pressed={activePair === i}
 					></button>
@@ -229,8 +229,8 @@
 					</div>
 
 					<!-- User receives -->
-					<div class="mb-3 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2.5">
-						<p class="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-600">User receives</p>
+					<div class="mb-3 rounded-lg border border-near-orange/20 bg-near-orange-light px-3 py-2.5">
+						<p class="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-near-orange">User receives</p>
 						<div class="flex items-center gap-2">
 							<img
 								src="https://coin-images.coingecko.com/coins/images/6319/small/usdc.png"
@@ -254,7 +254,7 @@
 				<!-- Footer: powered by -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Intents</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Intents</span>
 					</p>
 				</div>
 			</div>
@@ -275,22 +275,22 @@
 			<!-- Quick stats row -->
 			<div class="flex flex-wrap justify-center gap-4 sm:justify-start">
 				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">31</span>
+					<span class="text-xl font-bold text-near-orange">31</span>
 					<span class="text-[11px] text-near-text-secondary">chains</span>
 				</div>
 				<div class="w-px bg-near-border" aria-hidden="true"></div>
 				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">100+</span>
+					<span class="text-xl font-bold text-near-orange">100+</span>
 					<span class="text-[11px] text-near-text-secondary">assets</span>
 				</div>
 				<div class="w-px bg-near-border" aria-hidden="true"></div>
 				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">~30s</span>
+					<span class="text-xl font-bold text-near-orange">~30s</span>
 					<span class="text-[11px] text-near-text-secondary">settlement</span>
 				</div>
 				<div class="w-px bg-near-border" aria-hidden="true"></div>
 				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-green-dark">1 day</span>
+					<span class="text-xl font-bold text-near-orange">1 day</span>
 					<span class="text-[11px] text-near-text-secondary">to integrate (widget)</span>
 				</div>
 			</div>

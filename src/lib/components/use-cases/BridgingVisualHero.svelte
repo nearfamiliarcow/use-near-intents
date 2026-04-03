@@ -165,9 +165,9 @@
 					<div class="my-3 flex items-center justify-center gap-2">
 						<div class="h-px flex-1 bg-near-border"></div>
 						<div class="flex items-center gap-1.5 rounded-full border border-near-border bg-near-surface px-3 py-1 shadow-sm">
-							<div class="h-1.5 w-1.5 rounded-full bg-near-green-dark"></div>
-							<span class="text-[9px] font-semibold text-near-green-dark">NEAR Intents</span>
-							<ArrowRight size={10} class="text-near-green-dark" />
+							<div class="h-1.5 w-1.5 rounded-full bg-near-orange"></div>
+							<span class="text-[9px] font-semibold text-near-orange">NEAR Intents</span>
+							<ArrowRight size={10} class="text-near-orange" />
 						</div>
 						<div class="h-px flex-1 bg-near-border"></div>
 					</div>
@@ -190,14 +190,14 @@
 							<p class="text-[10px] text-near-gray-medium">on {scenario.to.chain}</p>
 						</div>
 						<span
-							class="text-sm font-semibold text-near-green-dark transition-all duration-300"
+							class="text-sm font-semibold text-near-orange transition-all duration-300"
 							style="opacity: {animating ? 0 : 1}"
 						>~30s</span>
 					</div>
 
 					<!-- CTA button -->
 					<button
-						class="mt-4 w-full rounded-xl bg-near-green-dark py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
+						class="mt-4 w-full rounded-xl bg-near-orange py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
 					>
 						Bridge — 1 signature
 					</button>
@@ -206,7 +206,7 @@
 				<!-- Footer -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Intents</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Intents</span>
 					</p>
 				</div>
 			</div>
@@ -217,7 +217,7 @@
 					<button
 						onclick={() => { activeScenario = i; }}
 						class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
-						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#00963f' : 'var(--color-near-border)'}"
+						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#fb4d01' : 'var(--color-near-border)'}"
 						aria-label="Example {i + 1}"
 						aria-pressed={activeScenario === i}
 					></button>

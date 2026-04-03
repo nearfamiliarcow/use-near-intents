@@ -18,27 +18,48 @@
 
 <header class="fixed top-0 left-0 right-0 z-50 border-b border-near-border bg-near-white/90 backdrop-blur-lg">
 	<nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-		<a href="{base}/" class="flex items-center gap-2 text-lg font-bold text-near-text">
-			<span class="text-near-green-dark">NEAR</span> Intents
+		<a href="{base}/" class="flex items-center" aria-label="NEAR Intents home">
+			<!-- NEAR Intents Primary logo — black wordmark on light background -->
+			<img
+				src="/logos/NEAR_Intents_Logo_Primary_Black.svg"
+				alt="NEAR Intents"
+				class="h-7 w-auto"
+			/>
 		</a>
 
 		<!-- Desktop nav -->
-		<div class="hidden items-center gap-8 md:flex">
-			{#each navItems as item}
-				<a
-					href={item.href}
-					class="text-sm font-medium transition-colors {(item.exact ? $page.url.pathname === item.href : $page.url.pathname.startsWith(item.href))
-						? 'text-near-green-dark'
-						: 'text-near-light-gray hover:text-near-text'}"
-				>
-					{item.label}
-				</a>
-			{/each}
+		<div class="hidden items-center gap-6 md:flex">
+			<a
+				href={navItems[0].href}
+				class="text-sm font-medium transition-colors {$page.url.pathname === navItems[0].href
+					? 'text-near-orange'
+					: 'text-near-gray hover:text-near-text'}"
+			>
+				{navItems[0].label}
+			</a>
+			<div class="h-4 w-px bg-near-border" aria-hidden="true"></div>
+			<a
+				href={navItems[1].href}
+				class="text-sm font-medium transition-colors {$page.url.pathname.startsWith(navItems[1].href)
+					? 'text-near-orange'
+					: 'text-near-gray hover:text-near-text'}"
+			>
+				{navItems[1].label}
+			</a>
+			<a
+				href={navItems[2].href}
+				class="text-sm font-medium transition-colors {$page.url.pathname.startsWith(navItems[2].href)
+					? 'text-near-orange'
+					: 'text-near-gray hover:text-near-text'}"
+			>
+				{navItems[2].label}
+			</a>
+			<div class="h-4 w-px bg-near-border" aria-hidden="true"></div>
 			<a
 				href="https://docs.near-intents.org"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="text-sm font-medium text-near-light-gray transition-colors hover:text-near-text"
+				class="text-sm font-medium text-near-gray transition-colors hover:text-near-text"
 			>
 				Docs
 			</a>
@@ -46,7 +67,7 @@
 				href="https://explorer.near-intents.org"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="text-sm font-medium text-near-light-gray transition-colors hover:text-near-text"
+				class="text-sm font-medium text-near-gray transition-colors hover:text-near-text"
 			>
 				Explorer
 			</a>
@@ -55,7 +76,7 @@
 		<!-- Mobile menu button -->
 		<button
 			onclick={() => (mobileOpen = !mobileOpen)}
-			class="p-2 text-near-light-gray md:hidden"
+			class="p-2 text-near-gray md:hidden"
 			aria-label="Toggle menu"
 		>
 			{#if mobileOpen}
@@ -75,8 +96,8 @@
 						href={item.href}
 						onclick={closeMobile}
 						class="block rounded-lg px-3 py-2.5 text-base font-medium {(item.exact ? $page.url.pathname === item.href : $page.url.pathname.startsWith(item.href))
-							? 'bg-near-green-light text-near-green-dark'
-							: 'text-near-light-gray hover:bg-near-bg hover:text-near-text'}"
+							? 'bg-near-orange-light text-near-orange'
+							: 'text-near-gray hover:bg-near-off-white hover:text-near-text'}"
 					>
 						{item.label}
 					</a>
@@ -86,7 +107,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					onclick={closeMobile}
-					class="block rounded-lg px-3 py-2.5 text-base font-medium text-near-light-gray hover:bg-near-bg hover:text-near-text"
+					class="block rounded-lg px-3 py-2.5 text-base font-medium text-near-gray hover:bg-near-off-white hover:text-near-text"
 				>
 					Docs
 				</a>
@@ -95,7 +116,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					onclick={closeMobile}
-					class="block rounded-lg px-3 py-2.5 text-base font-medium text-near-light-gray hover:bg-near-bg hover:text-near-text"
+					class="block rounded-lg px-3 py-2.5 text-base font-medium text-near-gray hover:bg-near-off-white hover:text-near-text"
 				>
 					Explorer
 				</a>

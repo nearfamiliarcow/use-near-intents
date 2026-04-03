@@ -68,7 +68,7 @@ howItWorksSteps:
   - icon: Cpu
     title: Intents routes and converts
     detail: "Solvers compete to fill the payment at the best price, converting the sender's token into the exact stablecoin amount requested. Any overpayment is automatically returned to the sender in their original token. You configure your own fee, charged on top of the payment."
-    color: "#00c853"
+    color: "#fb4d01"
     chainPill: NEAR Intents solver network
   - icon: PenLine
     title: Sender sends funds

@@ -106,7 +106,7 @@ howItWorksSteps:
   - icon: Cpu
     title: Intents finds the route
     detail: "Solvers compete to fill your swap at the best price. You configure your own fees, which are charged as swap fees for the user."
-    color: "#00c853"
+    color: "#fb4d01"
     chainPill: NEAR Intents solver network
   - icon: PenLine
     title: Sign or deposit

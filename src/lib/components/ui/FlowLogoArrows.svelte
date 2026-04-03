@@ -79,7 +79,7 @@
 	{/if}
 
 	<!-- Arrow -->
-	<ArrowRight size={18} class="shrink-0 text-near-green-dark" />
+	<ArrowRight size={18} class="shrink-0 text-near-orange" />
 
 	<!-- Destination asset(s) -->
 	<div class="flex items-center">
@@ -125,21 +125,15 @@
 
 <!-- Chain labels row — shown when assets have chain designations -->
 {#if hasChainLogos}
+	{@const fromChains = [...new Set(from.filter(a => a.chain).map(a => a.chain))]}
+	{@const toChains = [...new Set(to.filter(a => a.chain).map(a => a.chain))]}
 	<div class="mt-1.5 flex items-center gap-3 sm:gap-4">
-		<div class="flex items-center gap-1">
-			{#each from as asset}
-				{#if asset.chain}
-					<span class="text-[10px] text-near-gray-medium">{asset.symbol} on {asset.chain}</span>
-				{/if}
-			{/each}
-		</div>
+		<span class="text-[10px] text-near-gray-medium">
+			{fromChains.length === 1 ? `on ${fromChains[0]}` : 'Native chains'}
+		</span>
 		<div class="w-[18px] shrink-0"></div>
-		<div class="flex items-center gap-1">
-			{#each to as asset}
-				{#if asset.chain}
-					<span class="text-[10px] text-near-gray-medium">{asset.symbol} on {asset.chain}</span>
-				{/if}
-			{/each}
-		</div>
+		<span class="text-[10px] text-near-gray-medium">
+			{toChains.length === 1 ? `Wrapped on ${toChains[0]}` : 'Destination chains'}
+		</span>
 	</div>
 {/if}

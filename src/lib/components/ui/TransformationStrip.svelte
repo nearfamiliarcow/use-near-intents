@@ -36,11 +36,11 @@
 	</div>
 
 	<!-- AFTER panel -->
-	<div class="flex-1 bg-emerald-50 p-5 sm:p-6">
-		<p class="mb-2 text-[10px] font-semibold uppercase tracking-wider text-emerald-600 sm:text-xs">
+	<div class="flex-1 bg-near-orange-light p-5 sm:p-6">
+		<p class="mb-2 text-[10px] font-semibold uppercase tracking-wider text-near-orange sm:text-xs">
 			With NEAR Intents
 		</p>
-		<p class="text-base font-semibold text-emerald-900 sm:text-lg">{transformation.after.headline}</p>
-		<p class="mt-2 text-sm leading-relaxed text-emerald-800/80">{transformation.after.body}</p>
+		<p class="text-base font-semibold text-near-dark sm:text-lg">{transformation.after.headline}</p>
+		<p class="mt-2 text-sm leading-relaxed text-near-dark/80">{transformation.after.body}</p>
 	</div>
 </div>

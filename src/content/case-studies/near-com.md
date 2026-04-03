@@ -98,6 +98,36 @@ useCases:
             logo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
           - symbol: USDC
             logo: "https://coin-images.coingecko.com/coins/images/6319/small/usdc.png"
+  - useCase: cross-chain-earn
+    summary: "Users on near.com can put their assets to work across chains. Hold BTC? Deposit it and earn yield on Base lending markets. Hold ETH? Stake it for stETH yield. NEAR Intents handles the conversion, deposit into the yield protocol, and withdrawal back to your original asset — all from the near.com interface."
+    screenshots:
+      - /screenshots/near-dot-com-earn.png
+    captions:
+      - "Earning yield on USDC, ETH, BTC, and NEAR — 8.2% average APR on near.com"
+    flow:
+      - "BTC / ETH / SOL (any asset)"
+      - "NEAR Intents"
+      - "Yield on any chain"
+    logoFlow:
+      from:
+        assets:
+          - symbol: BTC
+            logo: "https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png"
+          - symbol: ETH
+            logo: "https://coin-images.coingecko.com/coins/images/279/small/ethereum.png"
+          - symbol: SOL
+            logo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
+        moreCount: 148
+      to:
+        assets:
+          - symbol: cbBTC
+            logo: "https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png"
+            chain: Base
+            chainLogo: "https://coin-images.coingecko.com/coins/images/31164/small/base.png"
+          - symbol: stETH
+            logo: "https://coin-images.coingecko.com/coins/images/13442/small/steth_logo.png"
+            chain: Ethereum
+            chainLogo: "https://coin-images.coingecko.com/coins/images/279/small/ethereum.png"
 ---
 
 ## Why near.com?
@@ -131,6 +161,10 @@ The near.com integration demonstrates that NEAR Intents is production-ready at t
 near.com is a unified interface for multi-chain assets. Users log in with one wallet — a passkey wallet, any EVM wallet (MetaMask, Rabby, etc.), or a NEAR native wallet — and that's the only key they ever need. From there, they can deposit from any supported chain to fund their account, and withdraw to any supported chain when they need to move assets out.
 
 While using near.com, the user never has to think about what chain they're on. Bitcoin, Ethereum, Solana, Zcash — it's all accessible from one place with one login. No juggling multiple wallets, no managing separate seed phrases, no switching between chain-specific apps. The complexity of 31 chains collapses into a single, seamless experience.
+
+## Cross-Chain Earn
+
+near.com lets users put their assets to work across chains without leaving the interface. A BTC holder can deposit Bitcoin and earn yield on Base lending markets. An ETH holder can stake for stETH yield. NEAR Intents handles the conversion, deposits into the yield protocol, and when the user is ready to withdraw, converts back to their original asset. Earn from anywhere, withdraw to anywhere.
 
 ## Asset Onboarding
 

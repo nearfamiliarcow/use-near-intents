@@ -32,7 +32,7 @@ howItWorksSteps:
   - title: "MPC network derives chain addresses"
     detail: "NEAR's MPC network uses the user's key and a deterministic derivation path to generate unique addresses on every target chain. No new key material — the derivation is mathematical and reproducible."
     icon: Cpu
-    color: "#00c853"
+    color: "#fb4d01"
     chainPill: MPC network
   - title: "User signs one transaction"
     detail: "To control assets on another chain, the user signs a single intent from their home wallet. The MPC nodes produce a valid signature for the destination chain. Fully non-custodial — only the user controls the key material."

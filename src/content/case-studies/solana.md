@@ -3,7 +3,7 @@ name: Solana
 slug: solana
 logo: https://coin-images.coingecko.com/coins/images/4128/small/solana.png
 url: https://solana.com
-description: "Solana joined the NEAR Intents network, connecting its ecosystem to 30 other chains — including UTXO chains like Zcash and Bitcoin. For the first time, ZEC holders can bridge directly to Solana DeFi."
+description: "Solana joined the NEAR Intents network via Omnibridge, connecting its ecosystem to 30 other chains. ZEC, STRK, and NEAR tokens have been bridged to Solana — with more assets coming."
 userType: blockchain
 chains: []
 status: live
@@ -19,7 +19,7 @@ tags: []
 storyBeats: []
 useCases:
   - useCase: bridging
-    summary: "NEAR Intents, partnering with Helius Labs, enabled native Zcash to be wrapped onto Solana — a first. ZEC holders send ZEC from the Zcash chain and receive wrapped ZEC on Solana, ready to trade on any Solana DEX or DeFi protocol."
+    summary: "Using Omnibridge (with Helius Labs verifying contract addresses), NEAR Intents bridged ZEC, STRK, and NEAR tokens onto Solana — all firsts. Holders of these assets send from their native chain and receive wrapped tokens on Solana, ready to trade on any Solana DEX or DeFi protocol."
     flow:
       - "ZEC (Zcash)"
       - "NEAR Intents"
@@ -31,10 +31,26 @@ useCases:
             logo: "https://coin-images.coingecko.com/coins/images/486/small/circle-zcash-color.png"
             chain: Zcash
             chainLogo: "https://coin-images.coingecko.com/coins/images/486/small/circle-zcash-color.png"
+          - symbol: STRK
+            logo: "https://coin-images.coingecko.com/coins/images/26433/small/starknet.png"
+            chain: Starknet
+            chainLogo: "https://coin-images.coingecko.com/coins/images/26433/small/starknet.png"
+          - symbol: NEAR
+            logo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
+            chain: NEAR
+            chainLogo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
       to:
         assets:
           - symbol: ZEC
             logo: "https://coin-images.coingecko.com/coins/images/486/small/circle-zcash-color.png"
+            chain: Solana
+            chainLogo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
+          - symbol: STRK
+            logo: "https://coin-images.coingecko.com/coins/images/26433/small/starknet.png"
+            chain: Solana
+            chainLogo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
+          - symbol: NEAR
+            logo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
             chain: Solana
             chainLogo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
     screenshots:
@@ -129,15 +145,13 @@ The problem was systemic. UTXO chain holders — representing tens of millions o
 
 The Solana integration with NEAR Intents operated at two levels.
 
-**First, Solana was added to the NEAR Intents network.** This is the chain-level event. NEAR Intents now recognizes Solana as both a source and destination chain, meaning its solver network can route assets to and from Solana. Every app on Solana inherits this capability.
+**First, Solana was added to the NEAR Intents network via [Omnibridge](https://docs.near.org/chain-abstraction/omnibridge).** This is the chain-level event. Omnibridge handles the cross-chain token wrapping, with Helius Labs verifying contract addresses on Solana. Every app on Solana inherits cross-chain access automatically.
 
-**Second, Zcash (and other UTXO assets) became bridgeable to Solana.** ZEC holders can now send native ZEC and receive assets on Solana — directly, without a CEX, without wrapped token complexity.
+**Second, multiple assets were bridged onto Solana for the first time.** ZEC (Zcash), STRK (Starknet), and NEAR have all been wrapped onto Solana via Omnibridge — each a first. More assets are being added as the network expands.
 
 ## What Changed for Users
 
-The most concrete change is for ZEC holders. A ZEC holder selects Zcash as their source chain, specifies how much ZEC to bridge, and signs one transaction. NEAR Intents routes the asset through its solver network — handling the UTXO chain complexity, the cross-chain routing, and the delivery to Solana. The user sees a preview, confirms, and waits roughly 30 seconds.
-
-The same flow works for BTC holders on Bitcoin, ETH holders on Ethereum, or users on any of the other 31 supported chains. All roads now lead to Solana.
+A ZEC holder selects Zcash as their source chain, specifies how much ZEC to bridge, and signs one transaction. NEAR Intents routes the asset through Omnibridge and its solver network — handling the UTXO chain complexity, the cross-chain routing, and the delivery to Solana. The user sees a preview, confirms, and waits roughly 30 seconds. The same flow works for STRK holders on Starknet, NEAR holders, BTC holders on Bitcoin, or users on any of the other 31 supported chains.
 
 ## What Changed for the Ecosystem
 

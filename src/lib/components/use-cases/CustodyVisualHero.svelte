@@ -43,7 +43,7 @@
 		{
 			homeChain: 'NEAR',
 			homeChainKey: 'near',
-			homeColor: '#00963f',
+			homeColor: '#fb4d01',
 			homeSymbol: 'NEAR',
 			label: 'NEAR account controls all',
 			controlled: [
@@ -107,7 +107,7 @@
 	></div>
 	<div
 		class="pointer-events-none absolute -bottom-16 -left-16 h-40 w-40 rounded-full opacity-[0.04]"
-		style="background: radial-gradient(circle, #00963f 0%, transparent 70%)"
+		style="background: radial-gradient(circle, #fb4d01 0%, transparent 70%)"
 		aria-hidden="true"
 	></div>
 
@@ -166,10 +166,10 @@
 							<div class="h-px w-12 bg-near-border"></div>
 							<div class="flex items-center gap-1.5 rounded-full border border-near-border bg-near-surface px-3 py-1 shadow-sm">
 								<div
-									class="h-1.5 w-1.5 rounded-full bg-near-green-dark"
+									class="h-1.5 w-1.5 rounded-full bg-near-orange"
 									class:animate-pulse={mounted && !animating}
 								></div>
-								<span class="text-[9px] font-semibold text-near-green-dark">MPC Key Derivation</span>
+								<span class="text-[9px] font-semibold text-near-orange">MPC Key Derivation</span>
 							</div>
 							<div class="h-px w-12 bg-near-border"></div>
 						</div>
@@ -212,7 +212,7 @@
 
 					<!-- CTA -->
 					<button
-						class="mt-4 w-full rounded-xl bg-near-green-dark py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
+						class="mt-4 w-full rounded-xl bg-near-orange py-3 text-sm font-bold text-white shadow-sm transition-opacity hover:opacity-90"
 					>
 						Control — 1 signature
 					</button>
@@ -221,7 +221,7 @@
 				<!-- Footer -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Chain Signatures</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Chain Signatures</span>
 					</p>
 				</div>
 			</div>
@@ -232,7 +232,7 @@
 					<button
 						onclick={() => { activeScenario = i; activeAddress = 0; }}
 						class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
-						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#00963f' : 'var(--color-near-border)'}"
+						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#fb4d01' : 'var(--color-near-border)'}"
 						aria-label="Scenario {i + 1}"
 						aria-pressed={activeScenario === i}
 					></button>
@@ -254,15 +254,15 @@
 			<!-- Stats row -->
 			<div class="flex flex-wrap justify-center gap-4 sm:justify-start">
 				<div class="flex flex-col items-center rounded-xl border border-near-border bg-near-surface px-4 py-3 sm:items-start">
-					<span class="text-xl font-bold text-near-green-dark">31</span>
+					<span class="text-xl font-bold text-near-orange">31</span>
 					<span class="text-[10px] text-near-gray-medium">chains supported</span>
 				</div>
 				<div class="flex flex-col items-center rounded-xl border border-near-border bg-near-surface px-4 py-3 sm:items-start">
-					<span class="text-xl font-bold text-near-green-dark">1</span>
+					<span class="text-xl font-bold text-near-orange">1</span>
 					<span class="text-[10px] text-near-gray-medium">key needed</span>
 				</div>
 				<div class="flex flex-col items-center rounded-xl border border-near-border bg-near-surface px-4 py-3 sm:items-start">
-					<span class="text-xl font-bold text-near-green-dark">0</span>
+					<span class="text-xl font-bold text-near-orange">0</span>
 					<span class="text-[10px] text-near-gray-medium">new seed phrases</span>
 				</div>
 			</div>

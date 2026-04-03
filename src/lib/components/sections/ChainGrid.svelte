@@ -57,8 +57,8 @@
 			{@const active = hoveredChain === chain.slug || clickedChain === chain.slug}
 			<button
 				class="flex flex-col items-center gap-1.5 rounded-xl px-2 py-2 transition-all
-					{active ? 'bg-near-green-light scale-110 shadow-md' : 'hover:bg-gray-50'}
-					{clickedChain === chain.slug ? 'ring-2 ring-near-green-dark/40' : ''}"
+					{active ? 'bg-near-orange-light scale-110 shadow-md' : 'hover:bg-gray-50'}
+					{clickedChain === chain.slug ? 'ring-2 ring-near-orange/40' : ''}"
 				onmouseenter={() => (hoveredChain = chain.slug)}
 				onmouseleave={() => (hoveredChain = null)}
 				onclick={() => toggleClick(chain.slug)}
@@ -88,7 +88,7 @@
 	>
 		<div class="rounded-xl border border-near-border bg-near-surface p-4 shadow-lg sm:p-5">
 			<h3 class="mb-3 text-sm font-semibold text-near-text sm:text-base">
-				{displayTotalCount} asset{displayTotalCount === 1 ? '' : 's'} on <span class="text-near-green-dark">{displayChainData?.name ?? ''}</span>
+				{displayTotalCount} asset{displayTotalCount === 1 ? '' : 's'} on <span class="text-near-orange">{displayChainData?.name ?? ''}</span>
 			</h3>
 			<div class="flex flex-wrap gap-2">
 				{#each displayAssets as asset}

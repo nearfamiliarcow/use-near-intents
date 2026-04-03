@@ -22,7 +22,7 @@
 		<button
 			onclick={() => onSelect('')}
 			class="rounded-full px-3 py-1.5 text-xs font-medium transition-colors sm:text-sm {selected === ''
-				? 'bg-near-green-dark text-white'
+				? 'bg-near-orange text-white'
 				: 'bg-gray-100 text-near-light-gray hover:bg-gray-200 hover:text-near-text'}"
 		>
 			All
@@ -31,7 +31,7 @@
 			<button
 				onclick={() => onSelect(option.slug)}
 				class="rounded-full px-3 py-1.5 text-xs font-medium transition-colors sm:text-sm {selected === option.slug
-					? 'bg-near-green-dark text-white'
+					? 'bg-near-orange text-white'
 					: 'bg-gray-100 text-near-light-gray hover:bg-gray-200 hover:text-near-text'}"
 			>
 				{option.name}

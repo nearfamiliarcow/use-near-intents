@@ -26,7 +26,7 @@
 		},
 		{
 			deposit: { symbol: 'BTC', logo: 'https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png', chain: 'Bitcoin', color: '#F7931A' },
-			receive: { symbol: 'NEAR', logo: 'https://coin-images.coingecko.com/coins/images/10365/small/near.jpg', chain: 'NEAR', color: '#00c853' },
+			receive: { symbol: 'NEAR', logo: 'https://coin-images.coingecko.com/coins/images/10365/small/near.jpg', chain: 'NEAR', color: '#fb4d01' },
 			amount: '0.1',
 			appLabel: 'yield vault on NEAR'
 		}
@@ -65,7 +65,7 @@
 	<!-- Background decoration -->
 	<div
 		class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-[0.06]"
-		style="background: radial-gradient(circle, #00c853 0%, transparent 70%)"
+		style="background: radial-gradient(circle, #fb4d01 0%, transparent 70%)"
 		aria-hidden="true"
 	></div>
 	<div
@@ -131,10 +131,10 @@
 
 					<!-- App receives -->
 					<div
-						class="mb-3 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2.5 transition-all duration-300"
+						class="mb-3 rounded-lg border border-near-orange/20 bg-near-orange-light px-3 py-2.5 transition-all duration-300"
 						style="opacity: {animating ? 0.5 : 1}"
 					>
-						<p class="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-600">Your app receives</p>
+						<p class="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-near-orange">Your app receives</p>
 						<div class="flex items-center gap-2">
 							{#if !hasImgError(activeScenario, 'receive')}
 								<img
@@ -164,7 +164,7 @@
 				<!-- Footer: powered by -->
 				<div class="border-t border-near-border bg-near-bg px-4 py-2.5 text-center">
 					<p class="text-[10px] text-near-gray-medium">
-						Powered by <span class="font-semibold text-near-green-dark">NEAR Intents</span>
+						Powered by <span class="font-semibold text-near-orange">NEAR Intents</span>
 					</p>
 				</div>
 			</div>
@@ -175,7 +175,7 @@
 					<button
 						onclick={() => { activeScenario = i; }}
 						class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
-						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#00963f' : 'var(--color-near-border)'}"
+						style="width: {activeScenario === i ? '16px' : '6px'}; background-color: {activeScenario === i ? '#fb4d01' : 'var(--color-near-border)'}"
 						aria-label="Example {i + 1}"
 						aria-pressed={activeScenario === i}
 					></button>

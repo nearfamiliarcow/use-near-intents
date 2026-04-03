@@ -32,7 +32,7 @@
 				<span class="text-sm text-near-text-secondary">
 					via <a
 						href={story.partnerSlug ? `/case-studies/${story.partnerSlug}` : undefined}
-						class={story.partnerSlug ? 'font-semibold text-near-green-dark underline-offset-2 hover:underline' : 'font-semibold text-near-text'}
+						class={story.partnerSlug ? 'font-semibold text-near-orange underline-offset-2 hover:underline' : 'font-semibold text-near-text'}
 					>{story.app}</a>
 				</span>
 			{/if}
@@ -43,7 +43,7 @@
 
 		<!-- WITH NEAR Intents -->
 		<div class="p-5 sm:p-6">
-			<p class="mb-4 text-[10px] font-bold uppercase tracking-widest text-near-green-dark sm:text-xs">
+			<p class="mb-4 text-[10px] font-bold uppercase tracking-widest text-near-orange sm:text-xs">
 				With NEAR Intents
 			</p>
 
@@ -53,14 +53,14 @@
 						<!-- Step circle -->
 						<span
 							class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
-							style="background-color: #00c85318; color: #00963f; border: 1.5px solid #00c85340"
+							style="background-color: #fb4d0118; color: #fb4d01; border: 1.5px solid #fb4d0140"
 						>{i + 1}</span>
 
 						<!-- Step text + connector -->
 						<div class="flex-1">
 							<span class="text-sm text-near-text">{step}</span>
 							{#if i < story.steps.length - 1}
-								<div class="mt-2 ml-px h-3 w-0.5 bg-near-green/25"></div>
+								<div class="mt-2 ml-px h-3 w-0.5 bg-near-orange/25"></div>
 							{/if}
 						</div>
 					</li>
@@ -68,9 +68,9 @@
 			</ol>
 
 			<!-- Time / outcome callout -->
-			<div class="mt-4 flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2.5">
-				<div class="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald-500"></div>
-				<span class="text-xs font-semibold text-emerald-700">~30 seconds, one signature</span>
+			<div class="mt-4 flex items-center gap-2 rounded-lg bg-near-orange-light px-3 py-2.5">
+				<div class="h-2 w-2 shrink-0 animate-pulse rounded-full bg-near-orange"></div>
+				<span class="text-xs font-semibold text-near-orange">~30 seconds, one signature</span>
 			</div>
 		</div>
 

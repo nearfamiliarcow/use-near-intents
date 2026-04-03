@@ -20,6 +20,7 @@
 		Brain,
 		Network,
 		Waypoints,
+		Radio,
 		type Icon as LucideIcon
 	} from 'lucide-svelte';
 	import type { PageData } from './$types';
@@ -62,7 +63,8 @@
 		bot: Bot,
 		brain: Brain,
 		network: Network,
-		waypoints: Waypoints
+		waypoints: Waypoints,
+		radio: Radio
 	};
 </script>
 
@@ -90,7 +92,7 @@
 	{#if activeUserType}
 		{@const ActiveIcon = iconMap[activeUserType.icon]}
 		<div class="mb-8 flex items-center gap-3 sm:mb-10">
-			<div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-near-green-light text-near-green-dark">
+			<div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-near-orange-light text-near-orange">
 				{#if ActiveIcon}
 					<ActiveIcon size={18} />
 				{/if}

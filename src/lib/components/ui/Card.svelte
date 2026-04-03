@@ -13,7 +13,7 @@
 {#if href}
 	<a
 		{href}
-		class="block rounded-xl border border-near-border bg-near-surface p-5 shadow-sm transition-all hover:border-near-green/40 hover:shadow-md sm:p-6 {className}"
+		class="block rounded-xl border border-near-border bg-near-surface p-5 shadow-sm transition-all hover:border-near-orange/40 hover:shadow-md sm:p-6 {className}"
 	>
 		{@render children()}
 	</a>

@@ -88,7 +88,7 @@
 						href={caseStudy.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-near-green-dark transition-colors hover:underline sm:mt-4"
+						class="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-near-orange transition-colors hover:underline sm:mt-4"
 					>
 						Visit {caseStudy.name}
 						<ExternalLink size={14} />
@@ -141,7 +141,7 @@
 						<div class="flex-1">
 							<h3 class="text-base font-semibold text-near-text sm:text-lg">{join.resolved?.name ?? join.useCase}</h3>
 						</div>
-						<a href="{base}/use-cases/{join.useCase}" class="text-xs font-medium text-near-green-dark hover:underline sm:text-sm">
+						<a href="{base}/use-cases/{join.useCase}" class="text-xs font-medium text-near-orange hover:underline sm:text-sm">
 							Learn more →
 						</a>
 					</div>
@@ -171,10 +171,10 @@
 							<!-- Before/after comparison — only shown when transformation data exists -->
 							{#if caseStudy.transformation}
 								<div class="mt-5 grid grid-cols-1 gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-4">
-									<div class="rounded-lg border border-emerald-200 bg-emerald-50 p-3 sm:p-4">
-										<p class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-emerald-600 sm:text-xs">With NEAR Intents</p>
-										<p class="text-xs font-semibold text-emerald-800 sm:text-sm">{caseStudy.transformation.after.headline}</p>
-										<p class="mt-1 text-xs text-emerald-700/80 sm:text-sm">{caseStudy.transformation.after.body}</p>
+									<div class="rounded-lg border border-near-orange/20 bg-near-orange-light p-3 sm:p-4">
+										<p class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-near-orange sm:text-xs">With NEAR Intents</p>
+										<p class="text-xs font-semibold text-near-dark sm:text-sm">{caseStudy.transformation.after.headline}</p>
+										<p class="mt-1 text-xs text-near-dark/80 sm:text-sm">{caseStudy.transformation.after.body}</p>
 									</div>
 									<div class="rounded-lg border border-red-100 bg-red-50 p-3 sm:p-4">
 										<p class="mb-1 text-[10px] font-semibold uppercase tracking-wider text-red-500 sm:text-xs">Before</p>
@@ -251,7 +251,7 @@
 			<div class="mt-5 flex flex-col items-center justify-center gap-3 sm:mt-6 sm:flex-row sm:gap-4">
 				<a
 					href="{base}/use-cases"
-					class="w-full rounded-lg bg-near-green-dark px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:w-auto"
+					class="w-full rounded-lg bg-near-orange px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:w-auto"
 				>
 					Explore Use Cases
 				</a>
@@ -259,7 +259,7 @@
 					href="https://docs.near-intents.org"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="w-full rounded-lg border border-near-border px-6 py-3 text-sm font-semibold text-near-text transition-colors hover:border-near-green-dark hover:text-near-green-dark sm:w-auto"
+					class="w-full rounded-lg border border-near-border px-6 py-3 text-sm font-semibold text-near-text transition-colors hover:border-near-orange hover:text-near-orange sm:w-auto"
 				>
 					Read the Docs
 				</a>

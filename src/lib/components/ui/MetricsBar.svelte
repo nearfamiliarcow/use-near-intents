@@ -20,7 +20,7 @@
 				<span class="hidden text-near-border sm:inline">|</span>
 			{/if}
 			<div class="flex items-baseline gap-1.5">
-				<span class="text-base font-bold text-near-green-dark">{metric.value}</span>
+				<span class="text-base font-bold text-near-orange">{metric.value}</span>
 				<span class="text-xs text-near-text-secondary">{metric.label}</span>
 			</div>
 		{/each}
@@ -36,7 +36,7 @@
 	>
 		{#each displayed as metric}
 			<div class="bg-near-surface px-5 py-5 text-center sm:px-6 sm:py-6">
-				<div class="text-2xl font-bold text-near-green-dark sm:text-3xl">{metric.value}</div>
+				<div class="text-2xl font-bold text-near-orange sm:text-3xl">{metric.value}</div>
 				<div class="mt-1 text-sm text-near-text-secondary">{metric.label}</div>
 				{#if metric.period}
 					<div class="mt-0.5 text-xs text-near-gray-medium">{metric.period}</div>

@@ -1,26 +1,77 @@
 @import 'tailwindcss';
 
-@theme {
-	--color-near-green: #00c853;
-	--color-near-green-light: #e8f5e9;
-	--color-near-green-dark: #00963f;
-	--color-near-black: #111827;
-	--color-near-dark: #1f2937;
-	--color-near-gray: #e5e7eb;
-	--color-near-gray-medium: #9ca3af;
-	--color-near-light-gray: #6b7280;
-	--color-near-white: #ffffff;
-	--color-near-bg: #fafafa;
-	--color-near-surface: #ffffff;
-	--color-near-text: #111827;
-	--color-near-text-secondary: #4b5563;
-	--color-near-border: #e5e7eb;
+@font-face {
+	font-family: 'FK Grotesk';
+	src: url('/fonts/FKGrotesk-Black.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
 
+@font-face {
+	font-family: 'FK Grotesk';
+	src: url('/fonts/FKGrotesk-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'FK Grotesk';
+	src: url('/fonts/FKGrotesk-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'FK Grotesk';
+	src: url('/fonts/FKGrotesk-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	/* NEAR Intents brand colors */
+	/* Primary accent: orange from the logo system */
+	--color-near-orange: #fb4d01;
+	--color-near-orange-light: #fff0ea;
+	--color-near-orange-dark: #d93f00;
+
+	/* Neutral palette from NEAR AI brand guidelines */
+	--color-near-black: #000000;
+	--color-near-dark: #272727;
+	--color-near-gray: #a7a7a7;
+	--color-near-off-white: #eeeeeb;
+	--color-near-white: #ffffff;
+
+	/* Surface and background */
+	--color-near-bg: #eeeeeb;
+	--color-near-surface: #ffffff;
+
+	/* Text hierarchy */
+	--color-near-text: #000000;
+	--color-near-text-secondary: #272727;
+	--color-near-text-muted: #a7a7a7;
+
+	/* UI borders */
+	--color-near-border: #d8d8d4;
+
+	/* Status colors — kept from original, contextually appropriate */
 	--color-status-live: #059669;
 	--color-status-building: #d97706;
 	--color-status-opportunity: #2563eb;
 
-	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+	/* Legacy green aliases — map to orange for backward compat */
+	--color-near-green: #fb4d01;
+	--color-near-green-light: #fff0ea;
+	--color-near-green-dark: #fb4d01;
+	--color-near-light-gray: #a7a7a7;
+	--color-near-gray-medium: #a7a7a7;
+
+	/* Typography — FK Grotesk as per brand guidelines */
+	--font-sans: 'FK Grotesk', system-ui, -apple-system, sans-serif;
 	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
@@ -58,5 +109,5 @@ body {
 }
 
 .prose a {
-	@apply text-near-green-dark underline;
+	@apply text-near-orange underline;
 }
