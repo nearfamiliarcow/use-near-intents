@@ -11,18 +11,18 @@ screenshots:
 relevantUserTypes:
   - single-chain-wallet
   - multi-chain-wallet
-  - defi-protocol
   - custodian
-  - exchange
+  - centralized-exchange
+  - ai-agent
 demoComponent: CustodyDemo
 sortOrder: 5
 revenueHooks:
   default: "Your wallet becomes a multi-chain vault — users hold assets everywhere without switching apps"
   single-chain-wallet: "Turn your single-chain wallet into a multi-chain vault — users custody assets on 31 chains with one key"
   multi-chain-wallet: "One signature controls assets across every chain — collapse key management into a single UX"
-  defi-protocol: "Let users bring assets from any chain into your protocol — no wrapping, no bridging UX friction"
   custodian: "Offer institutional clients a single-key custody solution across Bitcoin, Ethereum, Solana, and 28 more chains"
-  exchange: "Reduce withdrawal complexity — users move native assets to any chain with one authenticated action"
+  centralized-exchange: "Manage hot and cold wallets across 31 chains with one key infrastructure — reduce operational complexity"
+  ai-agent: "Your agents hold and manage assets on any chain from a single NEAR account — no per-chain wallet setup"
 howItWorksSteps:
   - title: "User connects their existing wallet"
     detail: "No new account required. The user connects their current wallet — Ethereum, Solana, Bitcoin, Zcash, or any supported chain. This becomes their master signing key."

@@ -251,62 +251,16 @@
 				</div>
 			</div>
 
-			<!-- Phone-frame preview — only when a coverImage is set -->
 			{#if useCase.coverImage}
-				<div class="phone-frame hidden shrink-0 sm:block" aria-hidden="true">
-					<!-- Notch bar -->
-					<div class="flex h-4 items-center justify-center rounded-t-xl bg-near-dark">
-						<div class="h-1 w-8 rounded-full bg-white/20"></div>
-					</div>
-					<!-- Screen: clamp height so tall screenshots show the top portion -->
-					<div class="overflow-hidden">
-						<img
-							src={useCase.coverImage}
-							alt=""
-							class="w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-						/>
-					</div>
-					<!-- Home bar -->
-					<div class="flex h-3 items-center justify-center rounded-b-xl bg-near-dark">
-						<div class="h-1 w-10 rounded-full bg-white/20"></div>
-					</div>
+				<div class="hidden w-36 shrink-0 items-center sm:flex" aria-hidden="true">
+					<img
+						src={useCase.coverImage}
+						alt=""
+						class="w-full rounded-lg object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+					/>
 				</div>
 			{/if}
 		</div>
 	</div>
 </a>
 
-<style>
-	.phone-frame {
-		width: 88px;
-		border-radius: 12px;
-		border: 1px solid color-mix(in srgb, var(--color-near-border) 80%, transparent);
-		background-color: var(--color-near-dark, #1a1a1a);
-		box-shadow:
-			0 2px 8px rgba(0, 0, 0, 0.18),
-			0 0 0 1px rgba(0, 0, 0, 0.06);
-		overflow: hidden;
-		/* Slight tilt for a "held phone" feel */
-		transform: rotate(1.5deg);
-		transition: transform 0.25s ease;
-	}
-
-	/* Straighten the frame when the card is hovered or focused */
-	a:hover .phone-frame,
-	a:focus-visible .phone-frame {
-		transform: rotate(0deg);
-	}
-
-	.phone-frame .overflow-hidden {
-		/* Show roughly the top 160px of the screenshot, scaled to 88px width */
-		max-height: 160px;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.phone-frame,
-		.phone-frame img {
-			transition: none !important;
-			transform: none !important;
-		}
-	}
-</style>

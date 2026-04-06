@@ -81,7 +81,7 @@ useCases:
     flow:
       - "BTC / ETH / SOL (external chains)"
       - "NEAR Intents"
-      - "NEAR / USDC (NEAR ecosystem)"
+      - "BTC / ETH / SOL on NEAR"
     logoFlow:
       from:
         assets:
@@ -94,40 +94,44 @@ useCases:
         moreCount: 148
       to:
         assets:
-          - symbol: NEAR
-            logo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
-          - symbol: USDC
-            logo: "https://coin-images.coingecko.com/coins/images/6319/small/usdc.png"
+          - symbol: BTC
+            logo: "https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png"
+            chain: NEAR
+            chainLogo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
+          - symbol: ETH
+            logo: "https://coin-images.coingecko.com/coins/images/279/small/ethereum.png"
+            chain: NEAR
+            chainLogo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
+          - symbol: SOL
+            logo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
+            chain: NEAR
+            chainLogo: "https://coin-images.coingecko.com/coins/images/10365/small/near_icon.png"
+      fromLabel: "Native chains"
+      toLabel: "Omnichain tokens on NEAR"
   - useCase: cross-chain-earn
-    summary: "Users on near.com can put their assets to work across chains. Hold BTC? Deposit it and earn yield on Base lending markets. Hold ETH? Stake it for stETH yield. NEAR Intents handles the conversion, deposit into the yield protocol, and withdrawal back to your original asset — all from the near.com interface."
+    summary: "Native BTC on Bitcoin → cbBTC in Moonwell on Base, earning 1.2% APY. NEAR Intents handles conversion, cross-chain routing, and protocol deposit in a single transaction."
     screenshots:
       - /screenshots/near-dot-com-earn.png
     captions:
-      - "Earning yield on USDC, ETH, BTC, and NEAR — 8.2% average APR on near.com"
+      - "Bitcoin → cbBTC in Moonwell on Base — 1.2% APY"
     flow:
-      - "BTC / ETH / SOL (any asset)"
+      - "BTC on Bitcoin"
       - "NEAR Intents"
-      - "Yield on any chain"
+      - "cbBTC in Moonwell (1.2% APY)"
     logoFlow:
       from:
         assets:
           - symbol: BTC
             logo: "https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png"
-          - symbol: ETH
-            logo: "https://coin-images.coingecko.com/coins/images/279/small/ethereum.png"
-          - symbol: SOL
-            logo: "https://coin-images.coingecko.com/coins/images/4128/small/solana.png"
-        moreCount: 148
+            chain: Bitcoin
       to:
         assets:
           - symbol: cbBTC
-            logo: "https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png"
+            logo: "https://coin-images.coingecko.com/coins/images/40143/small/cbbtc.webp"
             chain: Base
-            chainLogo: "https://coin-images.coingecko.com/coins/images/31164/small/base.png"
-          - symbol: stETH
-            logo: "https://coin-images.coingecko.com/coins/images/13442/small/steth_logo.png"
-            chain: Ethereum
-            chainLogo: "https://coin-images.coingecko.com/coins/images/279/small/ethereum.png"
+            chainLogo: "/logos/chains/base.svg"
+      fromLabel: "Native Bitcoin"
+      toLabel: "+ 0.3% APY via Moonwell"
 ---
 
 ## Why near.com?

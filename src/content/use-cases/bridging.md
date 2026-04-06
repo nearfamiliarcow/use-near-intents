@@ -18,6 +18,7 @@ relevantUserTypes:
   - bridge
   - lending
   - yield-vault
+  - liquid-staking
   - single-chain-wallet
   - multi-chain-wallet
 demoComponent: BridgingDemo
@@ -30,6 +31,14 @@ revenueHooks:
   bridge: "Surface NEAR Intents routes alongside your own — more asset coverage, better fills"
   lending: "Accept collateral from 31 chains — every asset holder becomes a potential borrower"
   yield-vault: "Users deposit from any chain in one step — remove the bridge-then-deposit friction"
+  liquid-staking: "Bridge staking tokens to new chains — your liquid staking derivative becomes available everywhere"
+  single-chain-wallet: "Your users access assets on other chains without leaving your wallet — bridging is invisible"
+  multi-chain-wallet: "Move assets between your supported chains seamlessly — one tap, no external bridge UI"
+featuredPartners:
+  - name: Starknet
+    logo: /logos/starknet.png
+    url: "https://starknet.io"
+    description: "STRK bridged out to other chains via NEAR Intents — bringing Starknet's native token to new ecosystems."
 userStories:
   - persona: "A ZEC holder on Zcash"
     userType: dex

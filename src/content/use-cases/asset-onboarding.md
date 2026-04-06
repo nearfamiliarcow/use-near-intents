@@ -5,6 +5,9 @@ icon: download
 tagline: "Turn any crypto holder into your user — they deposit from their chain, your app gets what it needs"
 coverImage: /screenshots/zodl-bitcoin-onboarding.jpg
 screenshots:
+  - src: /screenshots/dep-now-deposit.png
+    caption: "Deposit any asset into Hyperliquid perps — 1 ETH from Ethereum becomes 2,144 USDC on Arbitrum"
+    source: "dep.now"
   - src: /screenshots/zodl-bitcoin-onboarding.jpg
     caption: "Send Bitcoin and receive ZEC in your ZODL wallet"
     source: "ZODL"
@@ -30,12 +33,18 @@ sortOrder: 4
 revenueHooks:
   default: "Every cross-chain deposit into your app = a user you would have lost to bridging friction"
   single-chain-wallet: "Anyone with crypto anywhere can become your user — no CEX or bridge required"
+  multi-chain-wallet: "Accept deposits from every chain your users hold assets on — one integration, universal onboarding"
   blockchain: "Cross-chain deposits grow your ecosystem's TVL without users manually bridging"
   dex: "Traders from 31 chains can fund and trade directly — more users, more volume, more fees"
+  aggregator: "Let users deposit into your platform from any chain — remove the 'get assets onto our chain first' step"
   lending: "Borrowers deposit collateral from any chain — expand your addressable market overnight"
   perps: "Traders fund margin from any chain in one step — lower the barrier, increase open interest"
   liquid-staking: "Accept staking deposits from any chain — a Bitcoin holder stakes with one transaction"
   yield-vault: "Users deposit into your vault from any chain — one step instead of bridge + swap + deposit"
+  trading-bot: "Bots fund from any chain — deploy capital wherever the opportunity is without pre-positioning"
+  ai-agent: "Agents deposit into any protocol on any chain — autonomous cross-chain funding without manual bridging"
+  bridge: "Your bridge becomes an onboarding rail — users deposit into any app through your infrastructure"
+  payment-app: "Accept deposits from any crypto user on any chain — no wallet-specific support required"
 userStories:
   - persona: "A BTC holder"
     userType: lending
@@ -117,29 +126,4 @@ Asset Onboarding lets users deposit into your app from any chain — they send w
 
 This is the universal "deposit from anywhere" button. Add it once; every crypto holder on 31 chains can become your user.
 
-## How it Works
 
-1. **User wants to deposit into your app** — but their assets are on a different chain
-2. **Your app shows a "Deposit from any chain" option** — powered by NEAR Intents
-3. **User selects their source asset and chain** — from a token selector your app renders
-4. **NEAR Intents routes and converts** — solvers compete to deliver the best rate
-5. **One transaction, one signature** — or a static deposit address for walletless flow
-6. **Your app receives the required token** — on your chain, in ~30 seconds
-
-## Why This Matters
-
-The biggest source of user drop-off in any on-chain app is cross-chain friction. A user holds BTC on Bitcoin but your app runs on Base. They need to bridge, swap, then deposit — three separate steps across apps they may never have used. Most give up.
-
-Asset Onboarding collapses the entire flow into one step. You stop losing users at the deposit screen.
-
-## The Native BTC Advantage
-
-NEAR Intents uniquely supports native UTXO chains — Bitcoin, Dogecoin, Litecoin, Bitcoin Cash, Zcash, and Dash. A Bitcoin holder can deposit native BTC directly into your app on any EVM chain, where it arrives as cbBTC, WBTC, or tBTC automatically. No other cross-chain protocol handles native UTXO at this scale.
-
-With $7.9B in WBTC and $6.0B in cbBTC, the addressable market for BTC onboarding alone is massive — and mostly inaccessible to apps that only accept EVM deposits.
-
-## Integration Options
-
-- **Widget** — Drop-in deposit UI. Integration time: ~1 day.
-- **API** — Full control over the deposit UX. Integration time: ~1 week.
-- **Deposit Addresses** — Generate static addresses for any source chain. Users deposit from any wallet or exchange with zero wallet connection required.

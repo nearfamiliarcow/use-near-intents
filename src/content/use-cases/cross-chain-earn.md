@@ -3,6 +3,7 @@ name: Cross-Chain Earn
 slug: cross-chain-earn
 icon: trending-up
 tagline: "Earn yield on any asset, on any chain — one step in, one step out"
+coverImage: /images/cross-chain-yield.png
 screenshots:
   - src: /screenshots/near-dot-com-earn.png
     caption: "Earning yield on USDC, ETH, BTC, and NEAR — 8.2% average APR on near.com"
@@ -15,6 +16,7 @@ relevantUserTypes:
   - dex
   - single-chain-wallet
   - multi-chain-wallet
+  - custodian
 demoComponent: EarnDemo
 sortOrder: 3
 revenueHooks:
@@ -26,6 +28,7 @@ revenueHooks:
   dex: "Integrate cross-chain earn flows for your LP depositors — they supply liquidity from any chain without multiple transactions."
   single-chain-wallet: "Your users can earn yield without leaving your wallet — no bridge, no separate DeFi app, no CEX required."
   multi-chain-wallet: "Give users a single earn surface across all chains they hold assets on — and earn a fee on every deposit and withdrawal."
+  custodian: "Offer clients yield opportunities across chains from a single custody interface — earn fees on every deposit and withdrawal"
 userStories:
   - persona: "A Bitcoin holder"
     userType: lending
@@ -90,7 +93,7 @@ howItWorksSteps:
     chainPill: NEAR Intents solver network
   - icon: PenLine
     title: User signs once — or sends to a deposit address
-    detail: "If the user has a connected wallet, they sign one transaction on their source chain. If not — or if they're sending from a CEX — generate a static deposit address. The user sends native BTC, SOL, or ETH from any wallet or exchange. No chain-specific wallet required on the destination."
+    detail: "If the user has a connected wallet, they sign one transaction on their source chain. If not, generate a static deposit address. The user sends native BTC, SOL, or ETH from any wallet. No chain-specific wallet required on the destination."
     color: "#F7931A"
     chainPill: One signature or one send
   - icon: TrendingUp
@@ -105,41 +108,6 @@ revenueModel:
 
 ## What is Cross-Chain Earn?
 
-Cross-Chain Earn lets users go from any asset on any chain into a yield-bearing position on another chain — in one step. No bridging, no swapping, no manually depositing into a protocol. NEAR Intents handles the entire flow: asset conversion, cross-chain routing, and protocol deposit, all in a single transaction.
+Cross-Chain Earn lets users go from any asset on any chain into a yield-bearing position on another chain — in one step. No bridging, no swapping, no manually depositing into a protocol. NEAR Intents handles asset conversion, cross-chain routing, and protocol deposit in a single transaction. When the user is ready to exit, they withdraw back to their original asset on their original chain the same way.
 
-When the user is ready to exit, they withdraw back to their original asset on their original chain in the same one-step flow.
-
-**Key example**: A user holds native BTC on Bitcoin. They select "Earn 4.2% APY on Base" in your app. NEAR Intents converts their BTC to cbBTC and deposits it into a lending market on Base — one Bitcoin transaction from the user. When they exit, they receive native BTC back to their Bitcoin wallet.
-
-## How it Works
-
-1. **User selects their held asset** — any of 100+ assets across 31 chains
-2. **User selects a yield opportunity** — lending market, staking protocol, or yield vault you've integrated
-3. **NEAR Intents routes atomically** — converts and deposits in one solver-executed step
-4. **User signs one transaction** on their source chain — or sends to a deposit address from any wallet or exchange
-5. **Yield begins accruing** on the destination protocol (~30 seconds to open)
-6. **On withdrawal**: NEAR Intents converts the position back and delivers the original asset to the original chain
-
-## Why This Unlocks New TVL
-
-The biggest barrier to DeFi participation isn't yield — it's friction. A Bitcoin holder who wants to earn 4% APY on a Base lending market faces a 5-step onboarding process involving bridging, chain wallets, and gas management. Most never start.
-
-Cross-Chain Earn collapses that entirely. Your protocol's yield becomes accessible to every crypto holder on every chain — not just the users who already hold assets on your chain.
-
-For **lending protocols**: Native BTC holders can supply collateral directly from Bitcoin. The addressable depositor base expands from "users on your chain" to every crypto holder globally.
-
-For **liquid staking**: Accept staking inflows from any chain. A Solana user can stake into your Ethereum protocol with one Solana transaction — and unstake back to SOL.
-
-For **yield vaults**: Remove the deposit friction entirely. Users deposit from wherever they hold assets, in whatever token they hold.
-
-For **wallets**: Add a cross-chain earn tab without building DeFi integrations from scratch. Your users stay in your app and you earn on every deposit and withdrawal.
-
-## The Native BTC Opportunity
-
-NEAR Intents uniquely supports native UTXO chains — Bitcoin, Dogecoin, Litecoin, Bitcoin Cash, Zcash, and Dash. This means native BTC holders can access DeFi yield without ever wrapping their BTC themselves or touching an EVM chain. For lending protocols and yield vaults, this opens the single largest pool of idle crypto capital: Bitcoin holders sitting on 21M BTC with limited native yield options.
-
-## Integration Options
-
-- **Widget** — Drop-in earn UI with asset selector and yield options. Integration time: ~1 day.
-- **API** — Full control over the earn UX, custom yield curation, and fee configuration. Integration time: ~1 week.
-- **Deposit Addresses** — Generate static addresses for any source asset. Users deposit from any wallet or exchange — no wallet connection required on the destination chain.
+The biggest barrier to DeFi participation isn't yield — it's friction. Cross-Chain Earn removes it. Your protocol's yield becomes accessible to every crypto holder on every chain, including native BTC holders who have never touched an EVM chain. For lending protocols, liquid staking, and yield vaults, this expands the addressable depositor base from "users already on your chain" to the entire crypto market.

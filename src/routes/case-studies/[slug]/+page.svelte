@@ -159,6 +159,8 @@
 										to={join.logoFlow.to.assets}
 										fromMore={join.logoFlow.from.moreCount ?? 0}
 										toMore={join.logoFlow.to.moreCount ?? 0}
+										fromLabel={join.logoFlow.fromLabel}
+										toLabel={join.logoFlow.toLabel}
 									/>
 								</div>
 							{:else if join.flow && join.flow.length > 0}

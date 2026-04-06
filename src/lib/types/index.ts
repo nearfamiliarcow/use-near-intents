@@ -76,6 +76,8 @@ export interface LogoFlowSide {
 export interface LogoFlow {
 	from: LogoFlowSide;
 	to: LogoFlowSide;
+	fromLabel?: string;
+	toLabel?: string;
 }
 
 export interface CaseStudyUseCaseJoin {

@@ -91,6 +91,20 @@ export const userTypes: UserType[] = [
 		description: 'Cross-chain bridges and routing protocols',
 		icon: 'network',
 		question: 'How do I add NEAR Intents as a route?'
+	},
+	{
+		slug: 'centralized-exchange',
+		name: 'Centralized Exchange',
+		description: 'Centralized exchanges looking for cross-chain liquidity and solver access',
+		icon: 'building-2',
+		question: 'How do I access cross-chain orderflow?'
+	},
+	{
+		slug: 'custodian',
+		name: 'Custodian',
+		description: 'Custody providers managing assets across multiple chains',
+		icon: 'shield-check',
+		question: 'How do I custody assets across every chain?'
 	}
 ];
 

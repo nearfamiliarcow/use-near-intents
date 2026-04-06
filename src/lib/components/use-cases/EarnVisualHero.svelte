@@ -260,28 +260,6 @@
 				</p>
 			</div>
 
-			<!-- Quick stats row -->
-			<div class="flex flex-wrap justify-center gap-4 sm:justify-start">
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-orange">31</span>
-					<span class="text-[11px] text-near-text-secondary">source chains</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-orange">100+</span>
-					<span class="text-[11px] text-near-text-secondary">source assets</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-orange">~30s</span>
-					<span class="text-[11px] text-near-text-secondary">to open position</span>
-				</div>
-				<div class="w-px bg-near-border" aria-hidden="true"></div>
-				<div class="flex flex-col">
-					<span class="text-xl font-bold text-near-orange">configurable</span>
-					<span class="text-[11px] text-near-text-secondary">fees you keep</span>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

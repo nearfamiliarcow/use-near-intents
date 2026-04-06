@@ -116,6 +116,7 @@ const tokenLogos: Record<string, string> = {
 const chainLogos: Record<string, string> = {
 	near: 'https://coin-images.coingecko.com/coins/images/10365/small/near.jpg',
 	eth: 'https://coin-images.coingecko.com/coins/images/279/small/ethereum.png',
+	ethereum: 'https://coin-images.coingecko.com/coins/images/279/small/ethereum.png',
 	base: 'https://coin-images.coingecko.com/asset_platforms/images/131/small/base.jpeg',
 	arb: 'https://coin-images.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg',
 	arbitrum: 'https://coin-images.coingecko.com/coins/images/16547/small/photo_2023-03-29_21.47.00.jpeg',
@@ -124,6 +125,7 @@ const chainLogos: Record<string, string> = {
 	btc: 'https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png',
 	bitcoin: 'https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png',
 	bsc: 'https://coin-images.coingecko.com/coins/images/825/small/bnb-icon2_2x.png',
+	bnb: 'https://coin-images.coingecko.com/coins/images/825/small/bnb-icon2_2x.png',
 	avalanche: 'https://coin-images.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png',
 	avax: 'https://coin-images.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png',
 	pol: 'https://coin-images.coingecko.com/coins/images/4713/small/polygon.png',

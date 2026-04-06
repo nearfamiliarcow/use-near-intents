@@ -13,6 +13,8 @@
 		Bot,
 		Brain,
 		Network,
+		Building2,
+		ShieldCheck,
 		type Icon as LucideIcon
 	} from 'lucide-svelte';
 	import type { UserType } from '$lib/types';
@@ -38,7 +40,9 @@
 		vault: Vault,
 		bot: Bot,
 		brain: Brain,
-		network: Network
+		network: Network,
+		'building-2': Building2,
+		'shield-check': ShieldCheck
 	};
 </script>
 

@@ -51,6 +51,8 @@ relevantUserTypes:
   - ai-agent
   - bridge
   - payment-app
+  - custodian
+  - centralized-exchange
 demoComponent: SwapDemo
 sortOrder: 1
 revenueHooks:
@@ -62,6 +64,14 @@ revenueHooks:
   aggregator: "Add NEAR Intents as a route — better pricing, more paths, revenue share"
   lending: "Let borrowers and lenders move collateral across chains without leaving your app"
   perps: "Traders fund positions from any chain — more traders, more volume, more fees"
+  liquid-staking: "Users swap into your staking token from any chain — one transaction to start earning yield"
+  yield-vault: "Depositors convert any asset into your vault's required token in one step — no pre-swap needed"
+  trading-bot: "Your bots execute cross-chain swaps programmatically — arbitrage across 31 chains through one API"
+  ai-agent: "Give your agents the ability to swap any asset on any chain — autonomous cross-chain execution"
+  bridge: "Surface NEAR Intents swap routes alongside your bridge — more pairs, better fills, same UX"
+  payment-app: "Your users pay with any token — NEAR Intents converts to the recipient's preferred asset automatically"
+  custodian: "Clients rebalance portfolios across chains without moving assets between custodians"
+  centralized-exchange: "Offer cross-chain swaps to your users without listing every token — NEAR Intents handles the routing"
 userStories:
   - persona: "Alice"
     userType: single-chain-wallet
@@ -137,14 +147,3 @@ NEAR Intents handles the routing automatically. Your user selects source and des
 4. **Solvers execute the swap** — depositing the destination token to the user
 5. **Settlement happens on NEAR** — trustless, verifiable, fast
 
-## Integration Options
-
-- **Widget** — Drop-in UI component. Integration time: ~1 day.
-- **API** — Full control over the UX. Integration time: ~1 week.
-- **SDK** — Maximum flexibility for custom flows. Integration time: ~2 weeks.
-
-## Why 31 Chains Matters
-
-Your users hold assets everywhere — Ethereum, Solana, Bitcoin, Arbitrum, Base, and 27 more chains. Without cross-chain swaps, they need to leave your app to move assets. With NEAR Intents, every chain becomes accessible from your UI.
-
-Notably, NEAR Intents supports **native UTXO chains** — Bitcoin, Dogecoin, Litecoin, Bitcoin Cash, Zcash, and Dash. No other cross-chain protocol handles native BTC swaps at this scale.

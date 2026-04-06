@@ -18,7 +18,9 @@
 	import CustodyVisualHero from '$lib/components/use-cases/CustodyVisualHero.svelte';
 	import EarnVisualHero from '$lib/components/use-cases/EarnVisualHero.svelte';
 	import DistributionVisualHero from '$lib/components/use-cases/DistributionVisualHero.svelte';
-	import PartnerScreenshots from '$lib/components/use-cases/PartnerScreenshots.svelte';
+	import ChainIntegrationVisualHero from '$lib/components/use-cases/ChainIntegrationVisualHero.svelte';
+	import SolverVisualHero from '$lib/components/use-cases/SolverVisualHero.svelte';
+	import ExampleGallery from '$lib/components/use-cases/ExampleGallery.svelte';
 	import type { PageData } from './$types';
 	import type { Component } from 'svelte';
 
@@ -41,7 +43,9 @@
 		BridgingDemo: BridgingVisualHero,
 		CustodyDemo: CustodyVisualHero,
 		EarnDemo: EarnVisualHero,
-		DistributionDemo: DistributionVisualHero
+		DistributionDemo: DistributionVisualHero,
+		ChainIntegrationDemo: ChainIntegrationVisualHero,
+		SolverDemo: SolverVisualHero
 	};
 
 	const VisualHero = $derived(
@@ -51,30 +55,6 @@
 	// Whether this use case has an enhanced visual layout
 	const isVisualUseCase = $derived(VisualHero !== null);
 
-	// Build screenshot list: use case-level screenshots first, then case study screenshots
-	const partnerScreenshots = $derived([
-		...(data.useCase.screenshots ?? []).map((s) => ({
-			src: s.src,
-			caption: s.caption,
-			partnerName: s.source,
-			partnerLogo: '',
-			partnerSlug: ''
-		})),
-		...data.caseStudies.flatMap((cs) => {
-			const joinData = cs.joinData;
-			if (!joinData.screenshots || joinData.screenshots.length === 0) return [];
-			const useCaseSrcs = new Set((data.useCase.screenshots ?? []).map((s) => s.src));
-			return joinData.screenshots
-				.map((src, i) => ({
-					src,
-					caption: joinData.captions?.[i] ?? '',
-					partnerName: cs.name,
-					partnerLogo: cs.logo,
-					partnerSlug: cs.slug
-				}))
-				.filter((s) => !useCaseSrcs.has(s.src));
-		})
-	]);
 </script>
 
 <svelte:head>
@@ -125,10 +105,10 @@
 			</section>
 		{/if}
 
-		<!-- Partner screenshots -->
-		{#if partnerScreenshots.length > 0}
+		<!-- Example gallery -->
+		{#if data.useCase.screenshots && data.useCase.screenshots.length > 0}
 			<section class="mb-8 sm:mb-12">
-				<PartnerScreenshots screenshots={partnerScreenshots} />
+				<ExampleGallery examples={data.useCase.screenshots} />
 			</section>
 		{/if}
 
@@ -163,6 +143,8 @@
 										from={cs.joinData.logoFlow.from.assets}
 										to={cs.joinData.logoFlow.to.assets}
 										toMore={cs.joinData.logoFlow.to.moreCount ?? 0}
+										fromLabel={cs.joinData.logoFlow.fromLabel}
+										toLabel={cs.joinData.logoFlow.toLabel}
 									/>
 								</div>
 							{:else if cs.joinData.flow && cs.joinData.flow.length > 0}
@@ -184,7 +166,7 @@
 						Case Studies: {data.useCase.name}
 					</h2>
 				{:else}
-					<h3 class="mb-4 text-base font-semibold text-near-text sm:text-lg">{data.useCase.name} are also used by</h3>
+					<h3 class="mb-4 text-base font-semibold text-near-text sm:text-lg">Also using {data.useCase.name}</h3>
 				{/if}
 				<div class="flex flex-wrap gap-3 sm:gap-4">
 					{#each data.useCase.featuredPartners as partner}

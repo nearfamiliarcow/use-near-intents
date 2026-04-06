@@ -12,9 +12,13 @@
 		fromMore?: number;
 		/** Additional count shown as "+N more" after the to logos */
 		toMore?: number;
+		/** Custom label under the from logos */
+		fromLabel?: string;
+		/** Custom label under the to logos */
+		toLabel?: string;
 	}
 
-	let { from, to, fromMore = 0, toMore = 0 }: Props = $props();
+	let { from, to, fromMore = 0, toMore = 0, fromLabel, toLabel }: Props = $props();
 
 	let imgErrors = $state(new Set<string>());
 
@@ -124,16 +128,16 @@
 </div>
 
 <!-- Chain labels row — shown when assets have chain designations -->
-{#if hasChainLogos}
+{#if hasChainLogos || fromLabel || toLabel}
 	{@const fromChains = [...new Set(from.filter(a => a.chain).map(a => a.chain))]}
 	{@const toChains = [...new Set(to.filter(a => a.chain).map(a => a.chain))]}
 	<div class="mt-1.5 flex items-center gap-3 sm:gap-4">
 		<span class="text-[10px] text-near-gray-medium">
-			{fromChains.length === 1 ? `on ${fromChains[0]}` : 'Native chains'}
+			{fromLabel ?? (fromChains.length === 1 ? `on ${fromChains[0]}` : 'Native chains')}
 		</span>
 		<div class="w-[18px] shrink-0"></div>
 		<span class="text-[10px] text-near-gray-medium">
-			{toChains.length === 1 ? `Wrapped on ${toChains[0]}` : 'Destination chains'}
+			{toLabel ?? (toChains.length === 1 ? `Wrapped on ${toChains[0]}` : 'Destination chains')}
 		</span>
 	</div>
 {/if}

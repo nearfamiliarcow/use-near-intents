@@ -91,26 +91,3 @@ Cross-Pay lets your users pay anyone with any token they hold, on any chain — 
 
 This turns any wallet or payment app into a universal payment rail.
 
-## How it Works
-
-1. **Payment request is created** — recipient specifies the exact stablecoin amount (e.g., 500 USDC on Base)
-2. **Sender selects their payment source** — any token on any chain (e.g., BTC on Bitcoin)
-3. **NEAR Intents routes the payment** — converting and delivering in one step through competing solvers
-4. **Sender signs one transaction** — on their source chain, or sends to a deposit address
-5. **Recipient receives exactly what they requested** — precise stablecoin amount, no slippage
-
-## Why This Matters
-
-Today, crypto payments are broken by chain fragmentation. A Bitcoin holder can't easily pay someone who wants USDC on Base. A Solana user can't send stablecoins to an Ethereum address without multiple steps. Cross-Pay eliminates this friction entirely.
-
-For **wallets**: your users can pay anyone without leaving your app. You capture fee revenue on every payment and stop losing users to CEXes for token conversion.
-
-For **payment apps and merchants**: accept crypto from 31 chains with one integration. Your addressable market expands from "users on your chain" to every crypto holder globally.
-
-For **any app handling payments**: generate payment links and QR codes that any sender can pay with their existing wallet — no special wallet support required from you.
-
-## Integration Options
-
-- **Widget** — Drop-in payment UI. Integration time: ~1 day.
-- **API** — Full control over the payment UX. Integration time: ~1 week.
-- **Payment Links** — Shareable links and QR codes the payer opens in any wallet. Zero integration required on the sender side.

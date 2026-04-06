@@ -74,12 +74,12 @@
 	{/if}
 
 	<!-- Chain badge -->
-	<div class="absolute {s.chainOffset} {s.chainBorder} border-near-surface rounded-full bg-near-surface">
+	<div class="absolute {s.chainOffset} overflow-hidden">
 		{#if !chainError}
 			<img
 				src={chainLogo}
 				alt={chainName}
-				class="{s.chain} rounded-full object-contain"
+				class="{s.chain} object-contain"
 				onerror={() => (chainError = true)}
 			/>
 		{:else}
