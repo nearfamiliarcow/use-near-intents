@@ -44,12 +44,9 @@ relevantUserTypes:
   - dex
   - aggregator
   - lending
-  - perps
-  - liquid-staking
   - yield-vault
   - trading-bot
   - ai-agent
-  - bridge
   - payment-app
   - custodian
   - centralized-exchange
@@ -58,20 +55,17 @@ sortOrder: 1
 revenueHooks:
   default: "Every cross-chain swap through your app = fees you weren't capturing"
   single-chain-wallet: "Users stay in your wallet instead of leaving for a CEX — and you earn on every swap"
-  multi-chain-wallet: "Native cross-chain swaps mean users never need a bridge — you capture the volume"
-  blockchain: "Cross-chain swap access grows your ecosystem's TVL and active users"
+  multi-chain-wallet: "Native cross-chain swaps mean users never need a bridge — you capture the volume and keep them in your app"
+  blockchain: "Give users on other chains easy access to tokens and products your chain"
   dex: "Route cross-chain volume through your liquidity pools — new fees from 31 chains"
   aggregator: "Add NEAR Intents as a route — better pricing, more paths, revenue share"
   lending: "Let borrowers and lenders move collateral across chains without leaving your app"
-  perps: "Traders fund positions from any chain — more traders, more volume, more fees"
-  liquid-staking: "Users swap into your staking token from any chain — one transaction to start earning yield"
   yield-vault: "Depositors convert any asset into your vault's required token in one step — no pre-swap needed"
   trading-bot: "Your bots execute cross-chain swaps programmatically — arbitrage across 31 chains through one API"
   ai-agent: "Give your agents the ability to swap any asset on any chain — autonomous cross-chain execution"
-  bridge: "Surface NEAR Intents swap routes alongside your bridge — more pairs, better fills, same UX"
-  payment-app: "Your users pay with any token — NEAR Intents converts to the recipient's preferred asset automatically"
-  custodian: "Clients rebalance portfolios across chains without moving assets between custodians"
-  centralized-exchange: "Offer cross-chain swaps to your users without listing every token — NEAR Intents handles the routing"
+  payment-app: "Let your users swap between stablecoins on any chain for the lowest fees"
+  custodian: "Clients rebalance portfolios across chains without neeeding to transfer from your custody"
+  centralized-exchange: "Offer onchain liquidity to your users without listing every token — NEAR Intents handles the routing"
 userStories:
   - persona: "Alice"
     userType: single-chain-wallet

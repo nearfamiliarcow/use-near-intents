@@ -19,31 +19,27 @@ relevantUserTypes:
   - multi-chain-wallet
   - blockchain
   - dex
-  - aggregator
   - lending
   - perps
   - liquid-staking
   - yield-vault
   - trading-bot
   - ai-agent
-  - bridge
   - payment-app
 demoComponent: OnboardingDemo
 sortOrder: 4
 revenueHooks:
-  default: "Every cross-chain deposit into your app = a user you would have lost to bridging friction"
+  default: "Let a user deposit into your app from wherever they are. Any asset, any chain."
   single-chain-wallet: "Anyone with crypto anywhere can become your user — no CEX or bridge required"
   multi-chain-wallet: "Accept deposits from every chain your users hold assets on — one integration, universal onboarding"
-  blockchain: "Cross-chain deposits grow your ecosystem's TVL without users manually bridging"
+  blockchain: "Let users onboard to your chain from anywhere in crypto"
   dex: "Traders from 31 chains can fund and trade directly — more users, more volume, more fees"
-  aggregator: "Let users deposit into your platform from any chain — remove the 'get assets onto our chain first' step"
   lending: "Borrowers deposit collateral from any chain — expand your addressable market overnight"
   perps: "Traders fund margin from any chain in one step — lower the barrier, increase open interest"
-  liquid-staking: "Accept staking deposits from any chain — a Bitcoin holder stakes with one transaction"
+  liquid-staking: "Accept staking deposits from any chain, any asset"
   yield-vault: "Users deposit into your vault from any chain — one step instead of bridge + swap + deposit"
-  trading-bot: "Bots fund from any chain — deploy capital wherever the opportunity is without pre-positioning"
+  trading-bot: "Bots fund from any chain — deploy capital wherever the opportunity is without pre-positioning elsewhere"
   ai-agent: "Agents deposit into any protocol on any chain — autonomous cross-chain funding without manual bridging"
-  bridge: "Your bridge becomes an onboarding rail — users deposit into any app through your infrastructure"
   payment-app: "Accept deposits from any crypto user on any chain — no wallet-specific support required"
 userStories:
   - persona: "A BTC holder"

@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <footer class="border-t border-near-border bg-near-white">
 	<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -12,7 +16,7 @@
 			</div>
 			<div>
 				<img
-					src="/logos/NEAR_Intents_Logo_Primary_Black.svg"
+					src="{base}/logos/NEAR_Intents_Logo_Primary_Black.svg"
 					alt="NEAR Intents"
 					class="h-6 w-auto"
 				/>

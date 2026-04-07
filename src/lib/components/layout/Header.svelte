@@ -21,7 +21,7 @@
 		<a href="{base}/" class="flex items-center" aria-label="NEAR Intents home">
 			<!-- NEAR Intents Primary logo — black wordmark on light background -->
 			<img
-				src="/logos/NEAR_Intents_Logo_Primary_Black.svg"
+				src="{base}/logos/NEAR_Intents_Logo_Primary_Black.svg"
 				alt="NEAR Intents"
 				class="h-7 w-auto"
 			/>

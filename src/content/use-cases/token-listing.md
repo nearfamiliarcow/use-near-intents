@@ -11,7 +11,6 @@ screenshots:
 relevantUserTypes:
   - blockchain
   - dex
-  - bridge
   - lending
   - liquid-staking
   - perps
@@ -22,7 +21,6 @@ revenueHooks:
   default: "One listing on NEAR Intents puts your token in front of 70M+ Trust Wallet users, every Ledger Live user, and every other integrated app — no separate exchange listings required"
   blockchain: "Give your chain's native token instant distribution across every integrated wallet and app. Skip the exchange listing queue — one integration, maximum reach."
   dex: "List your DEX token on NEAR Intents — instant distribution to every integrated wallet and app without separate exchange listings"
-  bridge: "Tokens you bridge become instantly tradeable everywhere NEAR Intents is integrated. Your bridging infrastructure powers distribution, not just transfers."
   lending: "List your protocol's token and make it accessible from 31 chains — holders can buy it from any wallet in the network"
   liquid-staking: "Get your LST listed across the NEAR Intents network — holders on any chain can swap into your staking token in one step"
   perps: "List your protocol's token across 31 chains — traders can acquire it from any integrated wallet or app"

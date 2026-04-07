@@ -12,10 +12,10 @@ demoComponent: SolverDemo
 sortOrder: 8
 revenueHooks:
   default: "Every cross-chain swap on NEAR Intents is an intent waiting to be filled — capture spread on $15B+ in cumulative volume"
-  trading-bot: "Your bot already prices assets across chains. Connect it to the Message Bus and fill intents for profit — same logic, new orderflow."
-  dex: "Run a solver alongside your DEX to capture cross-chain flow that would otherwise route elsewhere."
+  trading-bot: "Your bot already prices assets across chains. Connect your bot to a Solver and fill intents for profit — same logic, new orderflow."
+  dex: "Run a solver alongside your DEX to capture user swap flows that would otherwise route elsewhere."
   aggregator: "Add NEAR Intents solver as a revenue stream — fill intents directly instead of just routing them."
-  centralized-exchange: "Your exchange already has deep liquidity — fill cross-chain intents and earn spread on retail orderflow from 31 chains"
+  centralized-exchange: "Your exchange already has deep liquidity — fill cross-chain intents and earn from retail orderflow."
 userStories: []
 howItWorksSteps:
   - icon: Radio

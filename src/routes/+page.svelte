@@ -1,5 +1,6 @@
 <script lang="ts">
 	import StatsBar from '$lib/components/sections/StatsBar.svelte';
+	import PartnerMarquee from '$lib/components/sections/PartnerMarquee.svelte';
 	import CaseStudyCarousel from '$lib/components/sections/CaseStudyCarousel.svelte';
 	import ChainGrid from '$lib/components/sections/ChainGrid.svelte';
 	import TickerBoard from '$lib/components/sections/TickerBoard.svelte';
@@ -21,6 +22,8 @@
 		<span class="text-near-orange">NEAR Intents</span>
 	</h1>
 </section>
+
+<PartnerMarquee />
 
 <StatsBar />
 

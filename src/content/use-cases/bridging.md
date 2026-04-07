@@ -15,25 +15,15 @@ relevantUserTypes:
   - blockchain
   - dex
   - aggregator
-  - bridge
-  - lending
-  - yield-vault
   - liquid-staking
-  - single-chain-wallet
-  - multi-chain-wallet
 demoComponent: BridgingDemo
 sortOrder: 2
 revenueHooks:
   default: "Every asset bridged to your chain or app is a user you would have lost to fragmented bridge UX"
-  blockchain: "Bring UTXO chains and 31 others to your ecosystem — grow TVL without fragmenting the bridging experience"
+  blockchain: "Bring UTXO assets and hundreds of other assets to your ecosystem — grow TVL without fragmenting the bridging experience"
   dex: "Users from 31 chains can deposit directly into your pools — wider user base, more volume"
-  aggregator: "Add cross-chain bridging as a feature — users never leave your app to move assets in"
-  bridge: "Surface NEAR Intents routes alongside your own — more asset coverage, better fills"
-  lending: "Accept collateral from 31 chains — every asset holder becomes a potential borrower"
-  yield-vault: "Users deposit from any chain in one step — remove the bridge-then-deposit friction"
-  liquid-staking: "Bridge staking tokens to new chains — your liquid staking derivative becomes available everywhere"
-  single-chain-wallet: "Your users access assets on other chains without leaving your wallet — bridging is invisible"
-  multi-chain-wallet: "Move assets between your supported chains seamlessly — one tap, no external bridge UI"
+  aggregator: "Use NEAR Intents to seamlessly move your users cross-chain so they can access the routes they want"
+  liquid-staking: "Issue your LST on any supported chain"
 featuredPartners:
   - name: Starknet
     logo: /logos/starknet.png

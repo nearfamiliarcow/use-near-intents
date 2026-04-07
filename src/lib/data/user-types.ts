@@ -6,14 +6,14 @@ export const userTypes: UserType[] = [
 		name: 'Single-Chain Wallet or dApp',
 		description: 'Wallets or dApps supporting one blockchain that use NEAR Intents for cross-chain access',
 		icon: 'wallet',
-		question: 'How do I give my users access to every chain?'
+		question: 'How do I onboard users from any chain?'
 	},
 	{
 		slug: 'multi-chain-wallet',
 		name: 'Multi-Chain Wallet or dApp',
 		description: 'Multi-chain wallets that add cross-chain swaps and payments',
 		icon: 'wallet-cards',
-		question: 'How do I add cross-chain swaps and payments?'
+		question: 'How do I move users between the chains I support?'
 	},
 	{
 		slug: 'blockchain',
@@ -24,7 +24,7 @@ export const userTypes: UserType[] = [
 	},
 	{
 		slug: 'dex',
-		name: 'DEX / AMM',
+		name: 'DEX',
 		description: 'Decentralized exchanges and automated market makers',
 		icon: 'arrow-left-right',
 		question: 'How do I capture cross-chain swap volume?'
@@ -48,21 +48,21 @@ export const userTypes: UserType[] = [
 		name: 'Aggregator',
 		description: 'DEX and bridge aggregators',
 		icon: 'git-merge',
-		question: 'How do I add NEAR Intents as a route?'
+		question: 'How do I use NEAR Intents as a route??'
 	},
 	{
 		slug: 'payment-app',
 		name: 'Payment App',
 		description: 'Crypto payment and commerce platforms',
 		icon: 'credit-card',
-		question: 'How do I accept any crypto from any chain?'
+		question: 'How do I accept any stablecoin payments from any chain?'
 	},
 	{
 		slug: 'liquid-staking',
 		name: 'Liquid Staking',
 		description: 'Liquid staking protocols',
 		icon: 'droplets',
-		question: 'How do I accept cross-chain staking deposits?'
+		question: 'How do I accept cross-chain staking deposits or bridge my LST to any chain?'
 	},
 	{
 		slug: 'yield-vault',
@@ -76,35 +76,28 @@ export const userTypes: UserType[] = [
 		name: 'Trading Bot',
 		description: 'Automated trading bot platforms',
 		icon: 'bot',
-		question: 'How do I fund bots from any chain?'
+		question: 'How do I run a solver and fill user intents?'
 	},
 	{
 		slug: 'ai-agent',
 		name: 'AI Agent Platform',
 		description: 'AI agent infrastructure and platforms',
 		icon: 'brain',
-		question: 'How do I give agents cross-chain funding rails?'
-	},
-	{
-		slug: 'bridge',
-		name: 'Bridge / Aggregator',
-		description: 'Cross-chain bridges and routing protocols',
-		icon: 'network',
-		question: 'How do I add NEAR Intents as a route?'
+		question: 'How do I give agents cross-chain rails?'
 	},
 	{
 		slug: 'centralized-exchange',
 		name: 'Centralized Exchange',
 		description: 'Centralized exchanges looking for cross-chain liquidity and solver access',
 		icon: 'building-2',
-		question: 'How do I access cross-chain orderflow?'
+		question: 'How do I use my liquidity to access onchain orderflow?'
 	},
 	{
 		slug: 'custodian',
 		name: 'Custodian',
 		description: 'Custody providers managing assets across multiple chains',
 		icon: 'shield-check',
-		question: 'How do I custody assets across every chain?'
+		question: 'How do I keep my customers in my app and let them move between any asset safely?'
 	}
 ];
 

@@ -11,6 +11,9 @@ screenshots:
   - src: /screenshots/zodl-crosspay-confirm.jpg
     caption: "Confirming a cross-chain payment in ZODL — one signature, exact stablecoin delivery"
     source: "ZODL"
+  - src: /screenshots/pingpay-crosspay.png
+    caption: "PingPay — create a shareable payment link, request any asset on any chain, payer pays with anything"
+    source: "PingPay"
 relevantUserTypes:
   - single-chain-wallet
   - multi-chain-wallet

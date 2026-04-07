@@ -5,6 +5,7 @@
 	import { getUserType } from '$lib/data/user-types';
 	import UseCaseCard from '$lib/components/content/UseCaseCard.svelte';
 	import RoleSelector from '$lib/components/ui/RoleSelector.svelte';
+	import PartnerMarquee from '$lib/components/sections/PartnerMarquee.svelte';
 	import {
 		Wallet,
 		WalletCards,
@@ -21,6 +22,8 @@
 		Network,
 		Waypoints,
 		Radio,
+		Building2,
+		ShieldCheck,
 		type Icon as LucideIcon
 	} from 'lucide-svelte';
 	import type { PageData } from './$types';
@@ -64,7 +67,9 @@
 		brain: Brain,
 		network: Network,
 		waypoints: Waypoints,
-		radio: Radio
+		radio: Radio,
+		'building-2': Building2,
+		'shield-check': ShieldCheck
 	};
 </script>
 
@@ -87,6 +92,12 @@
 			/>
 		</div>
 	</div>
+
+	{#if selectedUserType}
+		<div class="mb-8">
+			<PartnerMarquee filterUserType={selectedUserType} filterUserTypeName={activeUserType?.name ?? ''} rounded />
+		</div>
+	{/if}
 
 	<!-- Context bar when a role is selected -->
 	{#if activeUserType}
