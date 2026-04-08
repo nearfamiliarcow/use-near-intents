@@ -35,7 +35,7 @@
 			animated = true;
 		});
 
-		const HOLD = 2500;
+		const HOLD = 5000;
 		const EXIT = 300;
 		const ENTER = 300;
 
