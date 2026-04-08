@@ -91,7 +91,7 @@
 				{words[wordIndex]}
 			</span>
 		</span>
-		use
+		<br class="sm:hidden" />use
 		<span class="text-near-orange">NEAR Intents</span>
 	</h1>
 </section>
