@@ -79,7 +79,7 @@
 	<div class="mb-6 text-center sm:mb-8">
 		<h2 class="text-xl font-bold text-near-text sm:text-2xl">Live Supported Assets</h2>
 		<p class="mt-1 text-sm text-near-text-secondary sm:text-base">
-			{allTokens().length} assets across {new Set(tokens.map((t) => t.blockchain)).size} chains — hover to see cross-chain availability
+			Across {new Set(tokens.map((t) => t.blockchain)).size} chains — hover to see cross-chain availability
 		</p>
 	</div>
 
@@ -159,7 +159,7 @@
 					Show less
 					<ChevronUp size={16} />
 				{:else}
-					Show all {allTokens().length} assets
+					Show more assets
 					<ChevronDown size={16} />
 				{/if}
 			</button>

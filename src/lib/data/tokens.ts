@@ -89,7 +89,7 @@ const tokenLogos: Record<string, string> = {
 	BERA: 'https://coin-images.coingecko.com/coins/images/25235/large/BERA.png',
 	MON: 'https://coin-images.coingecko.com/coins/images/38927/large/mon.png',
 	ALEO: 'https://coin-images.coingecko.com/coins/images/27916/large/secondary-icon-dark.png',
-	XPL: 'https://coin-images.coingecko.com/coins/images/10365/small/near.jpg',
+	XPL: 'https://coin-images.coingecko.com/coins/images/66489/large/Plasma-symbol-green-1.png',
 
 	// DeFi
 	COW: 'https://coin-images.coingecko.com/coins/images/24384/large/CoW-token_logo.png',
@@ -156,7 +156,7 @@ const chainLogos: Record<string, string> = {
 	monad: 'https://coin-images.coingecko.com/coins/images/38927/large/mon.png',
 	aleo: 'https://coin-images.coingecko.com/coins/images/27916/large/secondary-icon-dark.png',
 	xlayer: 'https://coin-images.coingecko.com/coins/images/4463/small/WeChat_Image_20220118095654.png',
-	plasma: 'https://coin-images.coingecko.com/coins/images/10365/small/near.jpg',
+	plasma: 'https://coin-images.coingecko.com/coins/images/66489/large/Plasma-symbol-green-1.png',
 	adi: 'https://coin-images.coingecko.com/coins/images/38803/small/adi.jpeg',
 	aptos: 'https://coin-images.coingecko.com/coins/images/26455/small/aptos_round.png'
 };
@@ -248,6 +248,28 @@ const mergeIntoParent: Record<string, string> = {
 	WNEAR: 'NEAR', wNEAR: 'NEAR'
 };
 
+// Build set of allowed token symbols: CoinGecko top 200 by market cap + manual exceptions
+function getAllowedSymbols(): Set<string> {
+	const sorted = [...(geckoCache as CoinGeckoMarket[])].sort(
+		(a, b) => b.market_cap - a.market_cap
+	);
+	const allowed = new Set<string>();
+	for (const coin of sorted.slice(0, 200)) {
+		allowed.add(coin.symbol.toUpperCase());
+	}
+	// Stablecoins + tokens not in CoinGecko top 200 that we still want to show
+	for (const s of ['EURE', 'GBPE', 'SUSDC', 'USAD', 'ALEO', 'SAFE']) {
+		allowed.add(s);
+	}
+	// Allow wrapped/bridged variants whose parent token is allowed
+	for (const [variant, parent] of Object.entries(symbolAliases)) {
+		if (allowed.has(parent.toUpperCase())) {
+			allowed.add(variant.toUpperCase());
+		}
+	}
+	return allowed;
+}
+
 function getCoinGeckoMap(): Map<string, CoinGeckoMarket> {
 	const map = new Map<string, CoinGeckoMarket>();
 	for (const coin of geckoCache as CoinGeckoMarket[]) {
@@ -285,7 +307,8 @@ async function fetchTokens(): Promise<Token[]> {
 			contractAddress?: string;
 		}> = await oneClickRes.json();
 
-		cachedTokens = raw.map((t) => {
+		const allowed = getAllowedSymbols();
+		cachedTokens = raw.filter((t) => allowed.has(t.symbol.toUpperCase().replace(/^\$/, ''))).map((t) => {
 			const match = lookupGecko(t.symbol, geckoMarkets);
 			// Manual logo map first (has correct logos for WBTC, cbBTC, etc.)
 			// Then CoinGecko (only if it's a direct symbol match, not aliased)

@@ -5,9 +5,65 @@
 	import ChainGrid from '$lib/components/sections/ChainGrid.svelte';
 	import TickerBoard from '$lib/components/sections/TickerBoard.svelte';
 	import UserTypeSelector from '$lib/components/sections/UserTypeSelector.svelte';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
+
+	// Hero cycling words
+	const words = ['teams', 'agents', 'aggregators', 'wallets', 'dApps', 'exchanges'];
+	let wordIndex = $state(0);
+	let wordPhase = $state<'visible' | 'leaving' | 'entering'>('visible');
+	let animated = $state(false);
+	let widthPx = $state(0);
+	let heightPx = $state(0);
+	let measureEl = $state<HTMLSpanElement>();
+
+	onMount(() => {
+		const el = measureEl!;
+
+		function measure(word: string) {
+			el.textContent = word;
+			return el.offsetWidth;
+		}
+
+		widthPx = measure(words[0]);
+		heightPx = el.offsetHeight;
+
+		// Enable transitions after first paint
+		requestAnimationFrame(() => {
+			animated = true;
+		});
+
+		const HOLD = 2500;
+		const EXIT = 300;
+		const ENTER = 300;
+
+		const interval = setInterval(() => {
+			const next = (wordIndex + 1) % words.length;
+
+			// Slide current word up and out, start width transition
+			wordPhase = 'leaving';
+			widthPx = measure(words[next]);
+
+			setTimeout(() => {
+				// Jump new word to below position (no transition)
+				animated = false;
+				wordIndex = next;
+				wordPhase = 'entering';
+
+				// Re-enable transition and slide up into view
+				requestAnimationFrame(() => {
+					requestAnimationFrame(() => {
+						animated = true;
+						wordPhase = 'visible';
+					});
+				});
+			}, EXIT);
+		}, HOLD + EXIT + ENTER);
+
+		return () => clearInterval(interval);
+	});
 </script>
 
 <svelte:head>
@@ -18,7 +74,24 @@
 <!-- Hero -->
 <section class="mx-auto max-w-7xl px-4 py-8 text-center sm:px-6 sm:py-12 lg:px-8 lg:py-14">
 	<h1 class="text-3xl font-bold tracking-tight text-near-text sm:text-5xl lg:text-6xl">
-		See how teams use
+		<!-- Hidden measurer — inherits h1 font styles for accurate width -->
+		<span bind:this={measureEl} class="pointer-events-none invisible absolute whitespace-nowrap" aria-hidden="true"></span>
+		See how
+		<span
+			class="inline-block overflow-hidden pb-[0.15em] -mb-[0.15em] align-bottom {animated ? 'transition-[width] duration-500 ease-in-out' : ''}"
+			style={widthPx > 0 ? `width: ${widthPx}px` : ''}
+		>
+			<span
+				class="inline-block text-near-orange
+					{animated ? 'transition-all duration-300 ease-in-out' : ''}
+					{wordPhase === 'visible' ? 'translate-y-0 opacity-100' : ''}
+					{wordPhase === 'leaving' ? '-translate-y-full opacity-0' : ''}
+					{wordPhase === 'entering' ? 'translate-y-full opacity-0' : ''}"
+			>
+				{words[wordIndex]}
+			</span>
+		</span>
+		use
 		<span class="text-near-orange">NEAR Intents</span>
 	</h1>
 </section>
