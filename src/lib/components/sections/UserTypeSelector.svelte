@@ -4,7 +4,7 @@
 	import Card from '$lib/components/ui/Card.svelte';
 
 	const featured = userTypes.filter((ut) =>
-		['single-chain-wallet', 'multi-chain-wallet', 'blockchain', 'dex', 'lending', 'payment-app'].includes(ut.slug)
+		['single-chain-wallet', 'multi-chain-wallet', 'ai-agent', 'payment-app'].includes(ut.slug)
 	);
 </script>
 
@@ -18,5 +18,13 @@
 				<p class="mt-1 text-sm text-near-text-secondary">{ut.question}</p>
 			</Card>
 		{/each}
+		<Card href="{base}/use-cases/chain-integration/">
+			<h3 class="text-base font-semibold text-near-text sm:text-lg">Blockchain - L1 or L2</h3>
+			<p class="mt-1 text-sm text-near-text-secondary">How do I add my chain to NEAR Intents?</p>
+		</Card>
+		<Card href="https://nearfamiliarcow.github.io/use-near-intents/use-cases/token-listing/">
+			<h3 class="text-base font-semibold text-near-text sm:text-lg">Token Issuer</h3>
+			<p class="mt-1 text-sm text-near-text-secondary">How do I list my token on NEAR Intents or bridge it to other chains?</p>
+		</Card>
 	</div>
 </section>

@@ -13,14 +13,14 @@ export const userTypes: UserType[] = [
 		name: 'Multi-Chain Wallet or dApp',
 		description: 'Multi-chain wallets that add cross-chain swaps and payments',
 		icon: 'wallet-cards',
-		question: 'How do I move users between the chains I support?'
+		question: 'How do I help users seamlessly move assets between the chains and assetsI support?'
 	},
 	{
 		slug: 'blockchain',
 		name: 'Blockchain - L1 or L2',
 		description: 'Layer 1 and Layer 2 networks that want to attract cross-chain users and assets',
 		icon: 'blocks',
-		question: 'How do I bring assets and users to my chain?'
+		question: 'How do I add my chain to the NEAR Intents network or bridge assets to my chain?'
 	},
 	{
 		slug: 'dex',
@@ -48,14 +48,14 @@ export const userTypes: UserType[] = [
 		name: 'Aggregator',
 		description: 'DEX and bridge aggregators',
 		icon: 'git-merge',
-		question: 'How do I use NEAR Intents as a route??'
+		question: 'How do I use NEAR Intents as a route?'
 	},
 	{
 		slug: 'payment-app',
 		name: 'Payment App',
 		description: 'Crypto payment and commerce platforms',
 		icon: 'credit-card',
-		question: 'How do I accept any stablecoin payments from any chain?'
+		question: 'How do I convert between stablecoins for low fees or accept payments from any coin or chain?'
 	},
 	{
 		slug: 'liquid-staking',
@@ -80,10 +80,10 @@ export const userTypes: UserType[] = [
 	},
 	{
 		slug: 'ai-agent',
-		name: 'AI Agent Platform',
+		name: 'Agent Platform',
 		description: 'AI agent infrastructure and platforms',
 		icon: 'brain',
-		question: 'How do I give agents cross-chain rails?'
+		question: 'How do I give give my agent infrastructure for custody, payments, and exchange?'
 	},
 	{
 		slug: 'centralized-exchange',
