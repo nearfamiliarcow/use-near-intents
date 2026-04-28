@@ -1,6 +1,6 @@
 export const globalStats = [
 	{ label: 'Swap Volume', value: '$17.6B+', href: 'https://dune.com/near/near-intents' },
-	{ label: 'Total Swaps', value: '23.6M+', href: 'https://dune.com/near/near-intents' },
-	{ label: 'Fees Generated', value: '$30.7M+', href: 'https://dune.com/near/near-intents' },
+	{ label: 'Total Swaps', value: '23.7M+', href: 'https://dune.com/near/near-intents' },
+	{ label: 'Fees Generated', value: '$30.8M+', href: 'https://dune.com/near/near-intents' },
 	{ label: 'Chains Supported', value: '31', href: 'https://docs.near-intents.org/resources/chain-support' }
 ];
