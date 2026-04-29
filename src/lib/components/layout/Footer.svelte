@@ -20,8 +20,8 @@
 					alt="NEAR Intents"
 					class="h-6 w-auto"
 				/>
-				<p class="mt-4 text-sm text-near-gray">
-					Cross-chain, intent-based swap protocol built on NEAR Protocol. 31 chains. $15.9B+ volume.
+				<p class="mt-4 text-xs leading-relaxed text-near-gray">
+					This page is for general informational purposes only and does not constitute technical, financial, or legal advice. It is not a complete or authoritative description of NEAR Intents or its behaviour. The NEAR Intents ecosystem is evolving, and features, integrations, and metrics may change over time. Integrators should review official documentation and independently assess the system's design and risks before use. Execution depends on third-party participants and market conditions, and outcomes are not guaranteed.
 				</p>
 			</div>
 		</div>

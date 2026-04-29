@@ -234,6 +234,14 @@
 				<p class="mt-3 text-sm leading-relaxed text-near-text-secondary sm:text-base">
 					Any asset NEAR Intents supports can be bridged to any chain we support — and every bridged asset instantly has cross-chain liquidity across all 31 chains. UTXO chains like Zcash, Bitcoin, and Dogecoin included — no other bridge protocol handles them natively.
 				</p>
+				<div class="mt-4 inline-flex items-start gap-2 rounded-lg border border-near-orange/30 bg-near-orange/5 px-3 py-2 text-left">
+					<span class="mt-0.5 inline-flex h-5 shrink-0 items-center rounded-full bg-near-orange px-2 text-[10px] font-bold uppercase tracking-wide text-white">
+						In-house
+					</span>
+					<p class="text-xs leading-snug text-near-text-secondary sm:text-sm">
+						Powered by <span class="font-semibold text-near-text">Omni Bridge</span> — our in-house infrastructure that backs the omni liquidity layer and issues omni-bridged assets on every new chain.
+					</p>
+				</div>
 			</div>
 
 		</div>

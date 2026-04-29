@@ -15,7 +15,7 @@
 	import CrossPayVisualHero from '$lib/components/use-cases/CrossPayVisualHero.svelte';
 	import OnboardingVisualHero from '$lib/components/use-cases/OnboardingVisualHero.svelte';
 	import BridgingVisualHero from '$lib/components/use-cases/BridgingVisualHero.svelte';
-	import CustodyVisualHero from '$lib/components/use-cases/CustodyVisualHero.svelte';
+	import ChainAbstractionVisualHero from '$lib/components/use-cases/ChainAbstractionVisualHero.svelte';
 	import EarnVisualHero from '$lib/components/use-cases/EarnVisualHero.svelte';
 	import DistributionVisualHero from '$lib/components/use-cases/DistributionVisualHero.svelte';
 	import ChainIntegrationVisualHero from '$lib/components/use-cases/ChainIntegrationVisualHero.svelte';
@@ -41,7 +41,7 @@
 		CrossPayDemo: CrossPayVisualHero,
 		OnboardingDemo: OnboardingVisualHero,
 		BridgingDemo: BridgingVisualHero,
-		CustodyDemo: CustodyVisualHero,
+		ChainAbstractionDemo: ChainAbstractionVisualHero,
 		EarnDemo: EarnVisualHero,
 		DistributionDemo: DistributionVisualHero,
 		ChainIntegrationDemo: ChainIntegrationVisualHero,
@@ -82,9 +82,25 @@
 
 		<!-- Page title + tagline -->
 		<div class="mb-6 sm:mb-8">
-			<h1 class="text-2xl font-bold text-near-text sm:text-3xl lg:text-4xl">{data.useCase.name}</h1>
+			<div class="flex flex-wrap items-center gap-3">
+				<h1 class="text-2xl font-bold text-near-text sm:text-3xl lg:text-4xl">{data.useCase.name}</h1>
+				{#if data.useCase.comingSoon}
+					<span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800">
+						Coming soon
+					</span>
+				{/if}
+			</div>
 			<p class="mt-2 text-base text-near-text-secondary sm:mt-3 sm:text-lg">{data.useCase.tagline}</p>
 		</div>
+
+		{#if data.useCase.comingSoon}
+			<div class="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 sm:mb-8 sm:p-5">
+				<p class="text-sm font-semibold text-amber-900">This use case is not currently supported.</p>
+				<p class="mt-1 text-sm text-amber-800">
+					{data.useCase.name} is a future feature on the NEAR Intents roadmap. The design below describes how it will work once shipped — it isn't available for integration today.
+				</p>
+			</div>
+		{/if}
 
 		<!-- Visual hero -->
 		<section class="mb-8 sm:mb-12" aria-label="What {data.useCase.name} looks like">
@@ -220,9 +236,25 @@
 
 		<!-- Hero -->
 		<div class="mb-6 sm:mb-8">
-			<h1 class="text-2xl font-bold text-near-text sm:text-3xl lg:text-4xl">{data.useCase.name}</h1>
+			<div class="flex flex-wrap items-center gap-3">
+				<h1 class="text-2xl font-bold text-near-text sm:text-3xl lg:text-4xl">{data.useCase.name}</h1>
+				{#if data.useCase.comingSoon}
+					<span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800">
+						Coming soon
+					</span>
+				{/if}
+			</div>
 			<p class="mt-2 text-base text-near-text-secondary sm:mt-3 sm:text-lg">{data.useCase.tagline}</p>
 		</div>
+
+		{#if data.useCase.comingSoon}
+			<div class="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 sm:mb-8 sm:p-5">
+				<p class="text-sm font-semibold text-amber-900">This use case is not currently supported.</p>
+				<p class="mt-1 text-sm text-amber-800">
+					{data.useCase.name} is a future feature on the NEAR Intents roadmap. The design below describes how it will work once shipped — it isn't available for integration today.
+				</p>
+			</div>
+		{/if}
 
 		<!-- Extended content -->
 		{#if data.useCase.content}
@@ -294,18 +326,35 @@
 	<!-- ================================================================
 	     CTA — shared by all use cases
 	     ================================================================ -->
-	<section class="rounded-xl border border-near-border bg-near-surface p-6 text-center shadow-sm sm:p-8">
-		<h2 class="text-xl font-bold text-near-text sm:text-2xl">Add {data.useCase.name} to your product</h2>
-		<p class="mx-auto mt-2 max-w-lg text-sm text-near-text-secondary sm:mt-3 sm:text-base">
-			Integration is straightforward — widget takes a day, API takes a week.
-		</p>
-		<a
-			href="https://docs.near-intents.org"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="mt-5 inline-block rounded-lg bg-near-orange px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-6"
-		>
-			Read the Integration Docs
-		</a>
-	</section>
+	{#if data.useCase.comingSoon}
+		<section class="rounded-xl border border-amber-300 bg-amber-50 p-6 text-center shadow-sm sm:p-8">
+			<h2 class="text-xl font-bold text-amber-900 sm:text-2xl">{data.useCase.name} is on the roadmap</h2>
+			<p class="mx-auto mt-2 max-w-lg text-sm text-amber-800 sm:mt-3 sm:text-base">
+				This use case is not currently supported. The page above describes how it will work once shipped — check the docs for what's available today.
+			</p>
+			<a
+				href="https://docs.near-intents.org"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="mt-5 inline-block rounded-lg bg-amber-600 px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-6"
+			>
+				Browse the Integration Docs
+			</a>
+		</section>
+	{:else}
+		<section class="rounded-xl border border-near-border bg-near-surface p-6 text-center shadow-sm sm:p-8">
+			<h2 class="text-xl font-bold text-near-text sm:text-2xl">Add {data.useCase.name} to your product</h2>
+			<p class="mx-auto mt-2 max-w-lg text-sm text-near-text-secondary sm:mt-3 sm:text-base">
+				Integration is straightforward — widget takes a day, API takes a week.
+			</p>
+			<a
+				href="https://docs.near-intents.org"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="mt-5 inline-block rounded-lg bg-near-orange px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:mt-6"
+			>
+				Read the Integration Docs
+			</a>
+		</section>
+	{/if}
 </div>

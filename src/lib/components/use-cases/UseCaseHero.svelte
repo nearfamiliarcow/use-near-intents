@@ -42,7 +42,7 @@
 				<span class="text-near-orange">NEAR Intents?</span>
 			</h1>
 			<p class="mx-auto mt-4 max-w-2xl text-base text-near-text-secondary sm:text-lg">
-				Cross-chain capabilities — swaps, payments, deposits, custody — that slot into any product in days, not months.
+				Cross-chain capabilities — swaps, payments, deposits, chain abstraction — that slot into any product in days, not months.
 			</p>
 		</div>
 

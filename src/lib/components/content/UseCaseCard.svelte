@@ -99,7 +99,7 @@
 			badgeBg: 'bg-cyan-50',
 			badgeText: 'text-cyan-700'
 		},
-		'cross-chain-custody': {
+		'chain-abstraction': {
 			bg: 'hover:border-amber-300',
 			iconBg: 'bg-amber-100',
 			iconColor: 'text-amber-600',
@@ -192,7 +192,14 @@
 						{/if}
 					</div>
 					<div class="min-w-0 flex-1">
-						<h3 class="text-base font-semibold text-near-text sm:text-lg">{useCase.name}</h3>
+						<div class="flex flex-wrap items-center gap-2">
+							<h3 class="text-base font-semibold text-near-text sm:text-lg">{useCase.name}</h3>
+							{#if useCase.comingSoon}
+								<span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800">
+									Coming soon
+								</span>
+							{/if}
+						</div>
 						{#if !revenueHook}
 							<p class="mt-0.5 text-sm leading-snug text-near-text-secondary">{useCase.tagline}</p>
 						{/if}

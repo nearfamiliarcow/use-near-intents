@@ -81,7 +81,8 @@ function parseUseCase(file: MdFile): UseCase {
 			revShare: ''
 		},
 		howItWorksSteps: (m.howItWorksSteps as HowItWorksStep[]) ?? undefined,
-		content: renderContent(file)
+		content: renderContent(file),
+		comingSoon: (m.comingSoon as boolean) ?? false
 	};
 }
 

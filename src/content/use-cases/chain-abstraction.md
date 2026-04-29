@@ -1,24 +1,24 @@
 ---
-name: Cross-Chain Custody
-slug: cross-chain-custody
+name: Chain Abstraction
+slug: chain-abstraction
 icon: shield-check
-tagline: "One key. Every chain. Native custody across 31 blockchains."
-coverImage: /screenshots/cross-chain-custody-diagram.png
+tagline: "One key. Every chain. Control assets across 31 blockchains from a single wallet."
+coverImage: /screenshots/chain-abstraction-diagram.png
 screenshots:
-  - src: /screenshots/cross-chain-custody-diagram.png
+  - src: /screenshots/chain-abstraction-diagram.png
     caption: "One Ethereum signature controls assets on Bitcoin, Solana, Zcash, and more — powered by NEAR Chain Signatures"
     source: "NEAR Intents"
 relevantUserTypes:
   - single-chain-wallet
   - multi-chain-wallet
   - ai-agent
-demoComponent: CustodyDemo
+demoComponent: ChainAbstractionDemo
 sortOrder: 5
 revenueHooks:
-  default: "Your wallet becomes a multi-chain vault — users hold assets everywhere without switching apps"
-  single-chain-wallet: "Turn your single-chain wallet into a multi-chain vault — users custody assets on 31 chains with one key"
+  default: "Your wallet becomes a multi-chain command center — users own and control assets everywhere without switching apps"
+  single-chain-wallet: "Turn your single-chain wallet into a multi-chain experience — users control assets on 31 chains with one key"
   multi-chain-wallet: "One signature controls assets across every chain — collapse key management into a single UX. Support new chains easily with NEAR Intents."
-  ai-agent: "Your agents hold and manage assets on any chain from a single account — no per-chain wallet setup"
+  ai-agent: "Your agents control assets on any chain from a single account — no per-chain wallet setup"
 howItWorksSteps:
   - title: "User connects their existing wallet"
     detail: "No new account required. The user connects their current wallet — Ethereum, Solana, Bitcoin, Zcash, or any supported chain. This becomes their master signing key."
@@ -31,7 +31,7 @@ howItWorksSteps:
     color: "#fb4d01"
     chainPill: MPC network
   - title: "User signs one transaction"
-    detail: "To control assets on another chain, the user signs a single intent from their home wallet. The MPC nodes produce a valid signature for the destination chain. Fully non-custodial — only the user controls the key material."
+    detail: "To control assets on another chain, the user signs a single intent from their home wallet. The MPC nodes collectively produce a signature for the destination chain — no single node can sign alone. Only the user can request signatures for their derived addresses."
     icon: PenLine
     color: "#F7931A"
     chainPill: One signature
@@ -39,7 +39,7 @@ howItWorksSteps:
     detail: "No wrapping, no bridges, no synthetic tokens. Native BTC on Bitcoin. Native SOL on Solana. Native USDC on Base — all controlled by the user's original key."
     icon: ShieldCheck
     color: "#9945FF"
-    chainPill: Native custody
+    chainPill: Native assets
 userStories:
   - persona: "A user with an ETH wallet"
     userType: single-chain-wallet
@@ -47,10 +47,10 @@ userStories:
     app: "An Ethereum wallet with chain abstraction"
     partnerSlug: null
     steps:
-      - "Opens their ETH wallet — sees a 'Multi-Chain Vault' section"
+      - "Opens their ETH wallet — sees a 'Multi-Chain Assets' section"
       - "NEAR's MPC network derives a Bitcoin address and a Solana address from their ETH key"
       - "User sends BTC and SOL to their derived addresses"
-      - "Assets are natively custodied on Bitcoin and Solana, controlled by the ETH signature"
+      - "Assets sit natively on Bitcoin and Solana, controlled by the ETH signature"
       - "User sends, swaps, or withdraws — all signed from their existing Ethereum wallet"
     without: "Install a Bitcoin wallet, install a Solana wallet, manage two additional seed phrases, manually coordinate across three apps. Three keys, three UX surfaces, three failure points."
   - persona: "Bob, a Zcash user"
@@ -61,7 +61,7 @@ userStories:
     steps:
       - "Opens ZODL → navigates to cross-chain holdings"
       - "NEAR's MPC network derives a Base address from his Zcash key"
-      - "Bob receives USDC on Base to his derived address"
+      - "Bob receives USDC on Base at his derived address"
       - "USDC sits natively on Base, fully controlled by his ZODL wallet"
       - "Bob can move it, spend it, or swap it — all from ZODL, all with one signature"
     without: "Install MetaMask or Coinbase Wallet, create a new account, bridge assets manually, manage two separate key sets. Defeats the purpose of a focused single-chain wallet."
@@ -92,9 +92,9 @@ revenueModel:
   revShare: ""
 ---
 
-## What is Cross-Chain Custody?
+## What is Chain Abstraction?
 
-Cross-Chain Custody lets your users hold and control assets on any blockchain using a single existing wallet signature. Through [NEAR's Chain Signatures](https://docs.near.org/chain-abstraction/chain-signatures) (built on multi-party computation), a key on one chain derives unique, native addresses on every other chain — and signs transactions on those chains — without ever generating a new private key. The system is fully non-custodial: only the user controls the key material.
+Chain Abstraction lets your users operate seamlessly across every chain from a single wallet. Through [NEAR's Chain Signatures](https://docs.near.org/chain-abstraction/chain-signatures) (built on multi-party computation), a key on one chain derives unique, native addresses on every other chain — and signs transactions on those chains — without ever generating a new private key. Only the user can request signatures for their derived accounts; no third party, including NEAR, can sign on their behalf.
 
 Your ETH key controls a native Bitcoin address. Your Zcash key controls a Base address. One signature, assets everywhere — and the assets are truly native, not wrapped or synthetic.
 
@@ -106,25 +106,25 @@ NEAR's Chain Signatures layer consists of three interconnected components:
 
 **The `v1.signer` smart contract.** This NEAR contract accepts signature requests: a payload to sign, a derivation path, and a signing curve (Secp256k1 for EVM/Bitcoin, Ed25519 for Solana/Cosmos). It holds execution until the MPC service responds.
 
-**MPC signing service.** Independent nodes collectively produce a signature. No single node can sign alone — they generate partial signature shares aggregated across multiple rounds into a valid signature. The system is fully non-custodial: only the user controls the key material. No third party — including NEAR — can sign on the user's behalf. The network is live on NEAR mainnet today.
+**MPC signing service.** Independent nodes collectively produce a signature. No single node can sign alone — they generate partial signature shares aggregated through multiple rounds to jointly sign a transaction. Only the user can request signatures for their own derived accounts. The network is live on NEAR mainnet today.
 
 ## Why This Matters for Builders
 
-Today, supporting multiple chains means multiple signing schemes, multiple key derivation standards, and months of per-chain engineering. Cross-Chain Custody collapses this:
+Today, supporting multiple chains means multiple signing schemes, multiple key derivation standards, and months of per-chain engineering. Chain Abstraction collapses this:
 
 - **One integration → 31 chains.** Integrate NEAR Intents once and your wallet supports all supported chains, including Bitcoin, Solana, Cosmos, Zcash, XRP, EVM chains, and more.
-- **True native custody.** Assets live on the destination chain — not bridged, not wrapped, not synthetic. Native BTC on Bitcoin. Native USDC on Base.
+- **Truly native assets.** Assets live on the destination chain — not bridged, not wrapped, not synthetic. Native BTC on Bitcoin. Native USDC on Base.
 - **No new UX surface.** Users never manage a second seed phrase or install a second wallet. Their existing key is the master.
-- **Institutional grade.** MPC security model with no single point of failure — no one node can sign independently.
+- **MPC security model.** Signatures are produced jointly by independent nodes — no single point of failure, no single node can sign on its own.
 
 ## Supported Chains & Curves
 
 Chain Signatures supports **Secp256k1** (EVM chains, Bitcoin, XRP, Zcash) and **Ed25519** (Solana, Cosmos, Aptos, Sui). This covers the vast majority of blockchain ecosystems. If NEAR Intents supports a chain for swaps, Chain Signatures can derive and control addresses on it.
 
-## For Custodians and Institutions
+## For Wallets and Institutions
 
-Institutional custody today requires separate key material per chain — each with its own HSM configuration, backup strategy, and operational risk. Chain Signatures offers a different model: one master key, one signing ceremony, all chains. Audit one key, not thirty-one.
+Supporting multiple chains today typically requires separate key material per chain — each with its own signing scheme, backup strategy, and operational surface area. Chain Signatures offers a different model: one master key, one signing ceremony, addresses on every chain. Audit one key, not thirty-one.
 
-## The Chain Abstraction Advantage
+## The Foundation for Everything Else
 
-Chain Signatures is the underlying primitive that powers cross-chain swaps, payments, and bridging in NEAR Intents. Custody is the foundation: before you can move assets cross-chain, you need to control cross-chain addresses. Build on this layer and every other NEAR Intents capability becomes available to your users.
+Chain Signatures is the underlying primitive that powers cross-chain swaps, payments, and bridging in NEAR Intents. Before you can move assets cross-chain, you need to control cross-chain addresses. Build on this layer and every other NEAR Intents capability becomes available to your users.

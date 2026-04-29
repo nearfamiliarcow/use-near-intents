@@ -87,10 +87,10 @@ howItWorksSteps:
     color: "#9945FF"
     chainPill: Source chain
   - icon: Shield
-    title: NEAR Intents receives your asset
-    detail: "NEAR Intents custodies the native asset and issues a wrapped version on the destination chain. No third-party bridge needed — NEAR Intents handles the wrapping and issuance directly."
+    title: Omni Bridge receives your asset
+    detail: "NEAR Intents is powered by Omni Bridge, our in-house cross-chain infrastructure. Omni Bridge custodies the native asset and issues an omni-bridged wrapped version on the destination chain — the same primitive that backs the omni liquidity layer. Wrapping, issuance, and routing all happen in a single flow with no third-party bridge in the loop."
     color: "#fb4d01"
-    chainPill: NEAR Intents network
+    chainPill: Omni Bridge — in-house
   - icon: Zap
     title: Wrapped asset is issued on a new chain
     detail: "The wrapped asset lands on the destination chain ready to use. Because bridged assets are part of the NEAR Intents cross-chain network, every NEAR Intents user instantly has access to liquidity for the wrapped asset across all 31 chains."
@@ -106,3 +106,12 @@ revenueModel:
 NEAR Intents can bridge any supported asset to any supported chain — ZEC to Solana, BTC to NEAR, DOGE to Base, STRK to Arbitrum, any combination. When new chains are added to the network, your asset can be bridged there too — automatically. No swap fees, no slippage — bridging is one-to-one. UTXO chains like Bitcoin, Zcash, and Dogecoin are supported natively.
 
 We make bridging your asset to other chains extremely simple and convenient — and give it access to all the liquidity of the NEAR Intents protocol.
+
+## Powered by Omni Bridge
+
+NEAR Intents is built on top of **Omni Bridge**, our in-house cross-chain infrastructure. Omni Bridge does two jobs for the protocol:
+
+- **Powers the omni liquidity layer** — every NEAR Intents swap and bridge clears through Omni Bridge custody, which is what lets a single pool of liquidity serve all 31 supported chains.
+- **Issues omni-bridged assets on new chains** — when a new chain joins NEAR Intents, Omni Bridge mints the wrapped representation of any supported asset on that chain. No external bridge integration, no per-route negotiation — bringing your asset to a new chain is a configuration change, not a new project.
+
+Because Omni Bridge is built and operated by the NEAR Intents team, we control the issuance, custody, and security model end-to-end — and roadmap features land in the bridging flow without waiting on a third party.

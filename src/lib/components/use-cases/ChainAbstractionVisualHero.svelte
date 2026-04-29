@@ -15,7 +15,7 @@
 	};
 
 	// Each scenario: a "home" wallet on one chain, controlling assets on others
-	const custodyScenarios = [
+	const controlScenarios = [
 		{
 			homeChain: 'Ethereum',
 			homeChainKey: 'ethereum',
@@ -77,14 +77,14 @@
 
 		// Cycle through controlled addresses every 900ms for the pulse effect
 		const addressInterval = setInterval(() => {
-			activeAddress = (activeAddress + 1) % custodyScenarios[activeScenario].controlled.length;
+			activeAddress = (activeAddress + 1) % controlScenarios[activeScenario].controlled.length;
 		}, 900);
 
 		// Rotate scenarios every 3200ms
 		const scenarioInterval = setInterval(async () => {
 			animating = true;
 			await new Promise((r) => setTimeout(r, 320));
-			activeScenario = (activeScenario + 1) % custodyScenarios.length;
+			activeScenario = (activeScenario + 1) % controlScenarios.length;
 			activeAddress = 0;
 			animating = false;
 		}, 3200);
@@ -95,7 +95,7 @@
 		};
 	});
 
-	const scenario = $derived(custodyScenarios[activeScenario]);
+	const scenario = $derived(controlScenarios[activeScenario]);
 </script>
 
 <div class="relative overflow-hidden rounded-2xl border border-near-border bg-gradient-to-br from-near-surface via-near-bg to-near-surface">
@@ -113,13 +113,13 @@
 
 	<div class="relative flex flex-col items-center gap-8 p-6 sm:flex-row sm:gap-10 sm:p-10">
 
-		<!-- Left: custody diagram card -->
+		<!-- Left: chain abstraction diagram card -->
 		<div class="w-full max-w-xs flex-shrink-0 sm:w-72">
 			<div class="overflow-hidden rounded-2xl border border-near-border bg-near-surface shadow-xl">
 				<!-- Card header -->
 				<div class="border-b border-near-border px-4 py-3">
 					<div class="flex items-center justify-between">
-						<span class="text-sm font-bold text-near-text">Multi-Chain Vault</span>
+						<span class="text-sm font-bold text-near-text">Multi-Chain Wallet</span>
 						<span
 							class="rounded-full px-2 py-0.5 text-[10px] font-semibold transition-colors duration-500"
 							style="background-color: {scenario.homeColor}18; color: {scenario.homeColor}"
@@ -227,8 +227,8 @@
 			</div>
 
 			<!-- Scenario switcher dots -->
-			<div class="mt-3 flex justify-center gap-1.5" aria-label="Custody scenario examples">
-				{#each custodyScenarios as _, i}
+			<div class="mt-3 flex justify-center gap-1.5" aria-label="Chain abstraction scenario examples">
+				{#each controlScenarios as _, i}
 					<button
 						onclick={() => { activeScenario = i; activeAddress = 0; }}
 						class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"

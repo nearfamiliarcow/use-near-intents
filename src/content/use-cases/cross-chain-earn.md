@@ -2,6 +2,7 @@
 name: Cross-Chain Earn
 slug: cross-chain-earn
 icon: trending-up
+comingSoon: true
 tagline: "Earn yield on any asset, on any chain — one step in, one step out"
 coverImage: /images/cross-chain-yield.png
 screenshots:

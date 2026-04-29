@@ -35,7 +35,7 @@
 		'cross-chain-swaps': 'bg-blue-50 text-blue-600 border-blue-200',
 		'cross-pay': 'bg-purple-50 text-purple-600 border-purple-200',
 		'asset-onboarding': 'bg-emerald-50 text-emerald-600 border-emerald-200',
-		'cross-chain-custody': 'bg-amber-50 text-amber-600 border-amber-200',
+		'chain-abstraction': 'bg-amber-50 text-amber-600 border-amber-200',
 		'chain-integration': 'bg-indigo-50 text-indigo-600 border-indigo-200'
 	};
 </script>

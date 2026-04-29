@@ -48,10 +48,10 @@ useCases:
       - /screenshots/near-swap-btc-usdc.png
     captions:
       - "Trading 1.2 BTC for 81,601 USDC on near.com"
-  - useCase: cross-chain-custody
+  - useCase: chain-abstraction
     summary: "near.com is a unified interface for multi-chain assets. Log in with whatever wallet you're most comfortable with — passkey, any EVM wallet, or anything else supported — and that's the only key you ever need. Deposit from any supported chain to fund your account. Withdraw to any supported chain when you need to move assets out. While using near.com, you never think about what chain you're on — Bitcoin, Ethereum, Solana, Zcash, it's all accessible from one place. No juggling multiple wallets, no managing separate seed phrases, no switching between chain-specific apps. The complexity of 31 chains collapses into a single, seamless experience."
     screenshots:
-      - /screenshots/cross-chain-custody-diagram.png
+      - /screenshots/chain-abstraction-diagram.png
     captions:
       - "One key controls assets on Bitcoin, Solana, Zcash, and more — powered by NEAR Chain Signatures"
     flow:
@@ -160,7 +160,7 @@ near.com is a reference implementation. When NEAR introduces NEAR Intents to a p
 
 The near.com integration demonstrates that NEAR Intents is production-ready at the highest-stakes integration point in the ecosystem. If the official NEAR website trusts NEAR Intents to power its swap feature, that signal carries weight in every partner conversation that follows.
 
-## Cross-Chain Custody
+## Chain Abstraction
 
 near.com is a unified interface for multi-chain assets. Users log in with one wallet — a passkey wallet, any EVM wallet (MetaMask, Rabby, etc.), or a NEAR native wallet — and that's the only key they ever need. From there, they can deposit from any supported chain to fund their account, and withdraw to any supported chain when they need to move assets out.
 

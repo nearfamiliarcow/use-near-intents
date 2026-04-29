@@ -57,6 +57,7 @@ export interface UseCase {
 	revenueModel: RevenueModel;
 	howItWorksSteps?: HowItWorksStep[];
 	content: string;
+	comingSoon?: boolean;
 }
 
 export interface AssetLogo {
